@@ -1,2 +1,2 @@
-# UWSN
-Underground Wireless Sensor Network platform (PCB and Source)
+# WUSN
+Wireless Underground Sensor Network platform (PCB and Source)
