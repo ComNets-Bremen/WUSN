@@ -227,9 +227,6 @@ void setup()
 	}
   //activate the alarm
 	alarm.activateAlarm();
-	
-	//create an interupt for the rtc alarm
-	attachInterrupt(1, intHandler, FALLING);
 
 	//get current time from RTC
 	rtc.get(&sec, &minute, &hour, &day, &month, &year);
@@ -286,6 +283,15 @@ void setup()
 
   //reset alarm interrupt just in case
 	alarm.resetInterrupt();
+	
+	//create an interupt for the rtc alarm
+	attachInterrupt(1, intHandler, FALLING);
+	
+	getrtctime();
+	delay(500);
+	readsensor();
+	delay(500);
+	sender();
 	
 	//just being polite :-)
 	Serial.print("good night!\n");
