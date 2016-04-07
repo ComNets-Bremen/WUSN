@@ -14835,7 +14835,7 @@ Created 2014-12-22, aslant tao&lt;br&gt;
 <part name="P+3" library="supply1" deviceset="+12V" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
 <part name="U3" library="SparkFun-RF" deviceset="RFM69" device="CW"/>
-<part name="X1" library="con-coax" deviceset="SMA-" device="142-0701-851/861"/>
+<part name="X1" library="con-coax" deviceset="SMA-" device="142-0711-821/826" value="SMA-142-0711-821/826"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>

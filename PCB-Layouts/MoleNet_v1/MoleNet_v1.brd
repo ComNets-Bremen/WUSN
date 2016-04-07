@@ -1617,7 +1617,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 Radiall  and M/A COM.&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="J502-ND-142-0701-851/861">
+<package name="J502-ND-142-0711-821/826">
 <description>&lt;b&gt;SMA 50 Ohm&lt;/b&gt; Board Thickness &lt;b&gt;0.062&lt;/b&gt; Inch, End Launch Jack Receptacle&lt;p&gt;
 Johnson Components&lt;br&gt;
 Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
@@ -1635,20 +1635,20 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <wire x1="-4.45" y1="2.75" x2="-3.7" y2="2" width="0.2032" layer="21"/>
 <wire x1="-3.7" y1="2" x2="-1.55" y2="2" width="0.2032" layer="21"/>
 <wire x1="-1.55" y1="2" x2="-1.55" y2="4.65" width="0.2032" layer="21"/>
-<wire x1="-1.55" y1="4.65" x2="4.65" y2="4.65" width="0.2032" layer="51"/>
-<wire x1="4.65" y1="-4.65" x2="-1.55" y2="-4.65" width="0.2032" layer="51"/>
-<wire x1="4.65" y1="-4.65" x2="4.65" y2="-3.85" width="0.2032" layer="51"/>
-<wire x1="4.65" y1="-3.85" x2="-0.1" y2="-3.85" width="0.2032" layer="51"/>
+<wire x1="-1.55" y1="4.65" x2="4.1" y2="4.65" width="0.2032" layer="51"/>
+<wire x1="4.1" y1="-4.65" x2="-1.55" y2="-4.65" width="0.2032" layer="51"/>
+<wire x1="4.1" y1="-4.65" x2="4.1" y2="-3.85" width="0.2032" layer="51"/>
+<wire x1="4.1" y1="-3.85" x2="-0.1" y2="-3.85" width="0.2032" layer="51"/>
 <wire x1="-0.1" y1="-3.85" x2="-0.1" y2="3.85" width="0.2032" layer="21"/>
-<wire x1="-0.1" y1="3.85" x2="4.65" y2="3.85" width="0.2032" layer="51"/>
-<wire x1="4.65" y1="3.85" x2="4.65" y2="4.65" width="0.2032" layer="51"/>
+<wire x1="-0.1" y1="3.85" x2="4.1" y2="3.85" width="0.2032" layer="51"/>
+<wire x1="4.1" y1="3.85" x2="4.1" y2="4.65" width="0.2032" layer="51"/>
 <wire x1="-1.55" y1="4.65" x2="-0.1" y2="4.65" width="0.2032" layer="21"/>
 <wire x1="-0.1" y1="-4.65" x2="-1.55" y2="-4.65" width="0.2032" layer="21"/>
-<smd name="1" x="2.5654" y="0" dx="5.08" dy="2.286" layer="1"/>
-<smd name="G@1" x="2.5654" y="4.4196" dx="5.08" dy="2.286" layer="1"/>
-<smd name="G@2" x="2.5654" y="-4.4196" dx="5.08" dy="2.286" layer="1"/>
-<smd name="G@4" x="2.5654" y="-4.4196" dx="5.08" dy="2.286" layer="16"/>
-<smd name="G@3" x="2.5654" y="4.4196" dx="5.08" dy="2.286" layer="16"/>
+<smd name="1" x="2.1154" y="0" dx="4.191" dy="1.778" layer="1"/>
+<smd name="G@1" x="2.1154" y="3.4946" dx="4.191" dy="2.667" layer="1"/>
+<smd name="G@2" x="2.1154" y="-3.4946" dx="4.191" dy="2.667" layer="1"/>
+<smd name="G@4" x="2.1154" y="-3.4946" dx="4.191" dy="2.667" layer="16"/>
+<smd name="G@3" x="2.1154" y="3.4946" dx="4.191" dy="2.667" layer="16"/>
 <text x="0.635" y="6.35" size="1.778" layer="25">&gt;NAME</text>
 <text x="1.27" y="-8.89" size="1.778" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.025" y1="-0.5" x2="4.05" y2="0.5" layer="51"/>
@@ -2237,11 +2237,11 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="48.8315" y="35.306003125" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="U3" library="SparkFun-RF" package="RFM69CW-XXXS2" value="RFM69CW" x="65.8495" y="13.462" rot="R180"/>
-<element name="X1" library="con-coax" package="J502-ND-142-0701-851/861" value="SMA-142-0701-851/861" x="81.9023" y="7.4422" rot="R180">
-<attribute name="OC_NEWARK" value="99F6798" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="142-0701-851" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
+<element name="X1" library="con-coax" package="J502-ND-142-0711-821/826" value="SMA-142-0711-821/826" x="81.9023" y="7.4422" rot="R180">
+<attribute name="OC_NEWARK" value="16F3627" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="142-0711-821" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="JOHNSON COMPONENTS" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_FARNELL" value="1019325" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_FARNELL" value="1019328" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C5" library="resistor" package="C025-025X050" value="" x="32.0675" y="41.91" rot="R90"/>
 <element name="JP2" library="pinhead" package="1X06" value="" x="19.3675" y="63.5" rot="R180"/>
@@ -2561,7 +2561,7 @@ design rules under a new name.</description>
 <contactref element="X1" pad="1"/>
 <contactref element="U3" pad="1"/>
 <wire x1="80.1949" y1="7.462" x2="79.76388125" y2="7.453334375" width="0.6096" layer="1"/>
-<wire x1="79.76388125" y1="7.453334375" x2="79.3369" y2="7.4422" width="0.6096" layer="1"/>
+<wire x1="79.76388125" y1="7.453334375" x2="79.7869" y2="7.4422" width="0.6096" layer="1"/>
 <wire x1="73.3495" y1="7.462" x2="80.1949" y2="7.462" width="0.8128" layer="1"/>
 </signal>
 <signal name="D2">
@@ -2702,9 +2702,9 @@ design rules under a new name.</description>
 <wire x1="54.9275" y1="3.81" x2="53.6575" y2="5.08" width="0.6096" layer="1"/>
 <wire x1="53.6575" y1="25.4" x2="54.9275" y2="26.67" width="0.6096" layer="16"/>
 <wire x1="53.6575" y1="5.08" x2="53.6575" y2="25.4" width="0.6096" layer="16"/>
-<wire x1="21.9075" y1="8.89" x2="24.4475" y2="7.62" width="0.6096" layer="16"/>
-<wire x1="24.4475" y1="7.62" x2="26.9875" y2="10.16" width="0.6096" layer="16"/>
-<wire x1="26.9875" y1="10.16" x2="29.5275" y2="11.43" width="0.6096" layer="16"/>
+<wire x1="21.9075" y1="8.89" x2="24.4475" y2="8.89" width="0.6096" layer="16"/>
+<wire x1="24.4475" y1="8.89" x2="26.9875" y2="11.43" width="0.6096" layer="16"/>
+<wire x1="26.9875" y1="11.43" x2="29.5275" y2="11.43" width="0.6096" layer="16"/>
 <wire x1="18.0975" y1="10.16" x2="19.3675" y2="8.89" width="0.6096" layer="16"/>
 <wire x1="19.3675" y1="8.89" x2="21.9075" y2="8.89" width="0.6096" layer="16"/>
 <wire x1="29.5275" y1="11.43" x2="29.5275" y2="13.97" width="0.6096" layer="16"/>
