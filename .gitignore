@@ -30,3 +30,10 @@
 
 # Debug files
 *.dSYM/
+
+# Django related filed
+*.pyc
+db.sqlite3
+
+# Misc
+*.swp
