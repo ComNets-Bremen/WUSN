@@ -5,6 +5,21 @@ once a day at the time given by TTIME
 transmission occurs directly after the read-out 
 */
 
+/*
+ * TODOs and open issues:
+ * 
+ * - Use Google Protobuffer (maybe https://github.com/nanopb/nanopb)?
+ * - Do not use so many global variables
+ * - What happens if the EEPROM is full? -> cyclic buffer?
+ * - Store the NodeID in the EEPROM
+ * - Use a simple console for the following points:
+ *   - Set Date / Time
+ *   - Clear eeprom
+ *   - Maybe set the node id
+ *   - Implement with a serial.read() and serial.setTimeout() (with maybe 5 seconds)
+ * 
+*/
+
 #include <avr/io.h>
 #include <avr/power.h>
 #include <LowPower.h>			//from: https://github.com/LowPowerLab/LowPower
@@ -150,10 +165,7 @@ char 			payload[] = {0x44,(char) yy, 0x2F, (char) month, 0x2F,(char) day,0x20,
 /******************************************************************************/
 void intHandler()
 {
-	if (inttriggd == false)
-	{
-		inttriggd = true;
-	}
+  inttriggd = true;
 }
 
 /******************************************************************************/
@@ -419,7 +431,7 @@ void readsensor()//char *payload)
     
     if (templength == 3)
     {
-      wt[4] = '0x30';
+      wt[4] = 0x30;
       wt[5] = d[wclength+3];
 		  wt[6] = d[wclength+4];
 		  wt[7] = d[wclength+5];
@@ -559,7 +571,7 @@ void sendData()
 	  payload[TPOS]   = eep.read(address+T1OFF);
 	  payload[TPOS+1] = eep.read(address+T2OFF);
 	  payload[TPOS+2] = eep.read(address+T3OFF);
-	  payload[TPOS+3] = eep.read(address+T3OFF);
+	  payload[TPOS+3] = eep.read(address+T4OFF);
 	  payload[CHK]    = eep.read(address+CHKOFF);
 	  payload[SPOS]   = eep.read(address+SUCOFF);
 		//send the data
@@ -634,7 +646,7 @@ void writeToEEPROM()
   write2eep(address+T1OFF,wt[4]);
   write2eep(address+T2OFF,wt[5]);
   write2eep(address+T3OFF,wt[6]);
-  write2eep(address+T3OFF,wt[7]);
+  write2eep(address+T4OFF,wt[7]);
   write2eep(address+CHKOFF,(byte) chksum);
   write2eep(address+SUCOFF,suc);
   address += 0x10;
