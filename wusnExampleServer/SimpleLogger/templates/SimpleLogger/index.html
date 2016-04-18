@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html><head>
+        <title>Received data</title>
+        <meta http-equiv="refresh" content="60">
+        <style>
+
+        h1 { color: green; }
+        table, td, th { border: 1px solid black }
+        table { border-collapse: collapse; }
+        tr:nth-child(even) { background-color: #DDDDDD; }
+        </style>
+    </head>
+    <body>
+        <h1>Received data</h1>
+<p>
+<a href="/csvexport">Download all data</a>
+</p>
+
+{% if latest_data %}
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Received (Server time)</th>
+        <th>Timestamp Sensor</th>
+        <th>Node ID</th>
+        <th>Water raw</th>
+        <th>Water content (epsilon)</th>
+        <th>Temperature</th>
+        <th>RSSI</th>
+    </tr>
+    {% for data in latest_data %}
+    <tr>
+        <td>{{ data.id }}</td>
+        <td>{{ data.received_timestamp }}</td>
+        <td>{{ data.date_time_sensor }} </td>
+        <td>{{ data.node_id }} </td>
+        <td>{{ data.water_raw }} </td>
+        <td>{{ data.water }} </td>
+        <td>{{ data.temperature }} </td>
+        <td>{{ data.rssi }} </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+    <p>No data available.</p>
+{% endif %}
+    </body>
+</html>
