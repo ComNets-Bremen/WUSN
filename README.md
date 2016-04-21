@@ -3,6 +3,9 @@
 Wireless Underground Sensor Network platform (PCB, Arduino-Source and example
 server)
 
+This is an active project and the files in this directory (and the structure of
+the project itself) are subject to change!
+
 ## Prerequisites
 
 The following Arduino libraries are required:
