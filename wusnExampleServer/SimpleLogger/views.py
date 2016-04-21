@@ -21,8 +21,8 @@ def dataset(request, dataset_id):
 
 def csvExport(request):
     fname = "measurements_" + \
-	datetime.datetime.strftime(datetime.datetime.now(),
-	     "%Y-%m-%d_%H-%M-%S") +\
+        datetime.datetime.strftime(datetime.datetime.now(),
+             "%Y-%m-%d_%H-%M-%S") +\
         ".csv"
     print fname
     response = HttpResponse(content_type='text/csv')
