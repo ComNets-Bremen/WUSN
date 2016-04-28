@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1105,6 +1105,66 @@ Grid 2.54 mm&lt;p&gt;
 <rectangle x1="0.889" y1="-2.921" x2="1.651" y2="-1.905" layer="21"/>
 <rectangle x1="3.429" y1="-2.921" x2="4.191" y2="-1.905" layer="21"/>
 </package>
+<package name="1X03">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.175" y1="1.27" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.175" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-1.27" x2="-3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="3.175" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="1.27" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="3.175" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="3.175" y1="-1.27" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.016" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.016" shape="long" rot="R90"/>
+<text x="-3.8862" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-3.81" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+<rectangle x1="-2.794" y1="-0.254" x2="-2.286" y2="0.254" layer="51"/>
+<rectangle x1="2.286" y1="-0.254" x2="2.794" y2="0.254" layer="51"/>
+</package>
+<package name="1X03/90">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-3.81" y1="-1.905" x2="-1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.635" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="0.635" x2="-3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="6.985" x2="-2.54" y2="1.27" width="0.762" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="1.27" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.635" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="6.985" x2="0" y2="1.27" width="0.762" layer="21"/>
+<wire x1="1.27" y1="-1.905" x2="3.81" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="-1.905" x2="3.81" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="3.81" y1="0.635" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="6.985" x2="2.54" y2="1.27" width="0.762" layer="21"/>
+<pad name="1" x="-2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="0" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<text x="-4.445" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="5.715" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.921" y1="0.635" x2="-2.159" y2="1.143" layer="21"/>
+<rectangle x1="-0.381" y1="0.635" x2="0.381" y2="1.143" layer="21"/>
+<rectangle x1="2.159" y1="0.635" x2="2.921" y2="1.143" layer="21"/>
+<rectangle x1="-2.921" y1="-2.921" x2="-2.159" y2="-1.905" layer="21"/>
+<rectangle x1="-0.381" y1="-2.921" x2="0.381" y2="-1.905" layer="21"/>
+<rectangle x1="2.159" y1="-2.921" x2="2.921" y2="-1.905" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PINHD2">
@@ -1174,6 +1234,17 @@ Grid 2.54 mm&lt;p&gt;
 <pin name="2" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+<symbol name="PINHD3">
+<wire x1="-6.35" y1="-5.08" x2="1.27" y2="-5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-5.08" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-5.08" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="3" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1336,6 +1407,34 @@ Grid 2.54 mm&lt;p&gt;
 <connect gate="A" pin="2" pad="2"/>
 <connect gate="A" pin="3" pad="3"/>
 <connect gate="A" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PINHD-1X3" prefix="JP" uservalue="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="PINHD3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X03">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/90" package="1X03/90">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="2" pad="2"/>
+<connect gate="A" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15001,7 +15100,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <part name="FRAME1" library="frames" deviceset="A3L-LOC" device=""/>
 <part name="C5" library="resistor" deviceset="C-EU" device="025-025X050"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="JP6" library="pinhead" deviceset="PINHD-1X6" device=""/>
+<part name="JP7" library="pinhead" deviceset="PINHD-1X6" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
 <part name="C10" library="resistor" deviceset="C-EU" device="025-025X050"/>
@@ -15015,7 +15114,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <part name="U2" library="Atmel_By_element14_Batch_1-00" deviceset="ATMEGA328P-PU" device=""/>
 <part name="U1" library="Microchip_By_element14_Batch_1" deviceset="MCP1703-5002E/DB" device=""/>
 <part name="K1" library="Terminal_Blocks_Connectors_rev15e" deviceset="691241710003" device=""/>
-<part name="JP3" library="pinhead" deviceset="PINHD-2X5" device="" value="ISP"/>
+<part name="JP6" library="pinhead" deviceset="PINHD-2X5" device="" value="ISP"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
 <part name="C9" library="resistor" deviceset="C-EU" device="025-025X050"/>
@@ -15024,7 +15123,10 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <part name="C12" library="resistor" deviceset="C-EU" device="025-025X050"/>
 <part name="JP2" library="pinhead" deviceset="PINHD-2X3" device=""/>
 <part name="JP5" library="pinhead" deviceset="PINHD-1X4" device=""/>
-<part name="JP4" library="pinhead" deviceset="PINHD-1X4" device=""/>
+<part name="JP3" library="pinhead" deviceset="PINHD-1X3" device=""/>
+<part name="VCC" library="supply1" deviceset="+3V3" device=""/>
+<part name="JP8" library="pinhead" deviceset="PINHD-1X3" device=""/>
+<part name="JP4" library="pinhead" deviceset="PINHD-1X3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15050,14 +15152,14 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <wire x1="292.1" y1="55.88" x2="373.38" y2="55.88" width="0.1524" layer="94"/>
 <wire x1="373.38" y1="55.88" x2="373.38" y2="99.06" width="0.1524" layer="94"/>
 <wire x1="373.38" y1="99.06" x2="292.1" y2="99.06" width="0.1524" layer="94"/>
-<wire x1="220.98" y1="99.06" x2="220.98" y2="40.64" width="0.1524" layer="94"/>
-<wire x1="220.98" y1="40.64" x2="266.7" y2="40.64" width="0.1524" layer="94"/>
-<wire x1="266.7" y1="40.64" x2="266.7" y2="99.06" width="0.1524" layer="94"/>
-<wire x1="266.7" y1="99.06" x2="220.98" y2="99.06" width="0.1524" layer="94"/>
+<wire x1="236.22" y1="99.06" x2="236.22" y2="40.64" width="0.1524" layer="94"/>
+<wire x1="236.22" y1="40.64" x2="281.94" y2="40.64" width="0.1524" layer="94"/>
+<wire x1="281.94" y1="40.64" x2="281.94" y2="99.06" width="0.1524" layer="94"/>
+<wire x1="281.94" y1="99.06" x2="236.22" y2="99.06" width="0.1524" layer="94"/>
 <wire x1="137.16" y1="99.06" x2="137.16" y2="12.7" width="0.1524" layer="94"/>
-<wire x1="137.16" y1="12.7" x2="195.58" y2="12.7" width="0.1524" layer="94"/>
-<wire x1="195.58" y1="12.7" x2="195.58" y2="99.06" width="0.1524" layer="94"/>
-<wire x1="195.58" y1="99.06" x2="137.16" y2="99.06" width="0.1524" layer="94"/>
+<wire x1="137.16" y1="12.7" x2="223.52" y2="12.7" width="0.1524" layer="94"/>
+<wire x1="223.52" y1="12.7" x2="223.52" y2="99.06" width="0.1524" layer="94"/>
+<wire x1="223.52" y1="99.06" x2="137.16" y2="99.06" width="0.1524" layer="94"/>
 <wire x1="142.24" y1="175.26" x2="142.24" y2="147.32" width="0.1524" layer="94" style="longdash"/>
 <wire x1="142.24" y1="147.32" x2="185.42" y2="147.32" width="0.1524" layer="94" style="longdash"/>
 <wire x1="185.42" y1="147.32" x2="185.42" y2="175.26" width="0.1524" layer="94" style="longdash"/>
@@ -15077,10 +15179,10 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <wire x1="73.66" y1="91.44" x2="116.84" y2="91.44" width="0.1524" layer="94" style="longdash"/>
 <wire x1="116.84" y1="91.44" x2="116.84" y2="50.8" width="0.1524" layer="94" style="longdash"/>
 <wire x1="73.66" y1="50.8" x2="73.66" y2="91.44" width="0.1524" layer="94" style="longdash"/>
-<wire x1="299.72" y1="88.9" x2="327.66" y2="88.9" width="0.1524" layer="94" style="longdash"/>
+<wire x1="297.18" y1="88.9" x2="327.66" y2="88.9" width="0.1524" layer="94" style="longdash"/>
 <wire x1="327.66" y1="88.9" x2="327.66" y2="60.96" width="0.1524" layer="94" style="longdash"/>
-<wire x1="327.66" y1="60.96" x2="299.72" y2="60.96" width="0.1524" layer="94" style="longdash"/>
-<wire x1="299.72" y1="60.96" x2="299.72" y2="88.9" width="0.1524" layer="94" style="longdash"/>
+<wire x1="327.66" y1="60.96" x2="297.18" y2="60.96" width="0.1524" layer="94" style="longdash"/>
+<wire x1="297.18" y1="60.96" x2="297.18" y2="88.9" width="0.1524" layer="94" style="longdash"/>
 <wire x1="337.82" y1="88.9" x2="337.82" y2="60.96" width="0.1524" layer="94" style="longdash"/>
 <wire x1="337.82" y1="60.96" x2="365.76" y2="60.96" width="0.1524" layer="94" style="longdash"/>
 <wire x1="365.76" y1="60.96" x2="365.76" y2="88.9" width="0.1524" layer="94" style="longdash"/>
@@ -15100,7 +15202,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <text x="251.46" y="182.88" size="2.54" layer="94">SPI Devices</text>
 <text x="60.96" y="93.98" size="2.54" layer="94">Programming</text>
 <text x="152.4" y="93.98" size="2.54" layer="94">Sensor Interface</text>
-<text x="231.14" y="93.98" size="2.54" layer="94">Real Time Clock</text>
+<text x="246.38" y="93.98" size="2.54" layer="94">Real Time Clock</text>
 <text x="320.04" y="93.98" size="2.54" layer="94">Additional I/Os</text>
 <text x="347.98" y="86.36" size="1.778" layer="94">Analog</text>
 <text x="309.88" y="86.36" size="1.778" layer="94">Digital</text>
@@ -15114,37 +15216,37 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="228.6" y="142.24"/>
-<instance part="Q2" gate="1" x="162.56" y="60.96"/>
-<instance part="RTC" gate="-1" x="246.38" y="83.82"/>
-<instance part="RTC" gate="-2" x="246.38" y="78.74"/>
-<instance part="RTC" gate="-3" x="246.38" y="73.66"/>
-<instance part="RTC" gate="-4" x="246.38" y="68.58"/>
-<instance part="RTC" gate="-5" x="246.38" y="63.5"/>
-<instance part="RTC" gate="-6" x="246.38" y="58.42"/>
-<instance part="RTC" gate="-7" x="246.38" y="53.34"/>
+<instance part="Q2" gate="1" x="162.56" y="53.34"/>
+<instance part="RTC" gate="-1" x="261.62" y="83.82"/>
+<instance part="RTC" gate="-2" x="261.62" y="78.74"/>
+<instance part="RTC" gate="-3" x="261.62" y="73.66"/>
+<instance part="RTC" gate="-4" x="261.62" y="68.58"/>
+<instance part="RTC" gate="-5" x="261.62" y="63.5"/>
+<instance part="RTC" gate="-6" x="261.62" y="58.42"/>
+<instance part="RTC" gate="-7" x="261.62" y="53.34"/>
 <instance part="+3V5" gate="G$1" x="236.22" y="162.56" smashed="yes">
 <attribute name="VALUE" x="233.68" y="163.83" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V7" gate="G$1" x="205.74" y="162.56" smashed="yes">
 <attribute name="VALUE" x="203.2" y="163.83" size="1.778" layer="96"/>
 </instance>
-<instance part="GND5" gate="1" x="167.64" y="22.86"/>
-<instance part="GND8" gate="1" x="233.68" y="48.26"/>
+<instance part="GND5" gate="1" x="167.64" y="17.78"/>
+<instance part="GND8" gate="1" x="248.92" y="48.26"/>
 <instance part="GND9" gate="1" x="251.46" y="203.2"/>
 <instance part="GND15" gate="1" x="236.22" y="119.38"/>
 <instance part="P+1" gate="1" x="251.46" y="228.6" smashed="yes">
 <attribute name="VALUE" x="248.92" y="231.14" size="1.778" layer="96"/>
 </instance>
 <instance part="JP1" gate="G$1" x="261.62" y="213.36"/>
-<instance part="P+2" gate="1" x="180.34" y="81.28" smashed="yes">
-<attribute name="VALUE" x="177.8" y="83.82" size="1.778" layer="96"/>
+<instance part="P+2" gate="1" x="180.34" y="88.9" smashed="yes">
+<attribute name="VALUE" x="177.8" y="91.44" size="1.778" layer="96"/>
 </instance>
 <instance part="+3V6" gate="G$1" x="198.12" y="162.56" smashed="yes">
 <attribute name="VALUE" x="195.58" y="163.83" size="1.778" layer="96"/>
 </instance>
-<instance part="Q1" gate="1" x="177.8" y="68.58"/>
-<instance part="GND1" gate="1" x="165.1" y="50.8"/>
-<instance part="R2" gate="G$1" x="172.72" y="76.2"/>
+<instance part="Q1" gate="1" x="177.8" y="60.96"/>
+<instance part="GND1" gate="1" x="165.1" y="43.18"/>
+<instance part="R2" gate="G$1" x="172.72" y="68.58"/>
 <instance part="+3V1" gate="G$1" x="20.32" y="231.14" smashed="yes">
 <attribute name="VALUE" x="17.78" y="232.41" size="1.778" layer="96"/>
 </instance>
@@ -15182,7 +15284,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="C5" gate="G$1" x="27.94" y="177.8"/>
 <instance part="GND13" gate="1" x="27.94" y="149.86"/>
-<instance part="JP6" gate="A" x="53.34" y="38.1"/>
+<instance part="JP7" gate="A" x="53.34" y="38.1"/>
 <instance part="GND14" gate="1" x="38.1" y="27.94"/>
 <instance part="+3V8" gate="G$1" x="30.48" y="43.18" smashed="yes">
 <attribute name="VALUE" x="27.94" y="44.45" size="1.778" layer="96"/>
@@ -15199,39 +15301,41 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <instance part="GND17" gate="1" x="53.34" y="149.86"/>
 <instance part="U2" gate="A" x="91.44" y="200.66"/>
 <instance part="U1" gate="A" x="335.28" y="223.52"/>
-<instance part="K1" gate="G$1" x="147.32" y="38.1" rot="MR0"/>
-<instance part="JP3" gate="A" x="93.98" y="66.04"/>
+<instance part="K1" gate="G$1" x="147.32" y="33.02" rot="MR0"/>
+<instance part="JP6" gate="A" x="93.98" y="66.04"/>
 <instance part="GND18" gate="1" x="109.22" y="55.88"/>
 <instance part="+3V10" gate="G$1" x="109.22" y="78.74" smashed="yes">
 <attribute name="VALUE" x="106.68" y="80.01" size="1.778" layer="96"/>
 </instance>
 <instance part="C9" gate="G$1" x="264.16" y="144.78"/>
 <instance part="GND19" gate="1" x="264.16" y="119.38"/>
-<instance part="C11" gate="G$1" x="165.1" y="33.02"/>
-<instance part="C12" gate="G$1" x="175.26" y="33.02"/>
+<instance part="C11" gate="G$1" x="165.1" y="27.94"/>
+<instance part="C12" gate="G$1" x="175.26" y="27.94"/>
 <instance part="JP2" gate="A" x="160.02" y="157.48"/>
 <instance part="JP5" gate="A" x="355.6" y="71.12"/>
-<instance part="JP4" gate="A" x="317.5" y="71.12"/>
+<instance part="JP3" gate="A" x="190.5" y="76.2"/>
+<instance part="VCC" gate="G$1" x="195.58" y="88.9"/>
+<instance part="JP8" gate="A" x="213.36" y="38.1"/>
+<instance part="JP4" gate="A" x="317.5" y="73.66"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="RXD" class="0">
 <segment>
-<pinref part="JP6" gate="A" pin="3"/>
-<wire x1="50.8" y1="40.64" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
-<label x="38.1" y="40.64" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U2" gate="A" pin="PD0"/>
 <wire x1="109.22" y1="215.9" x2="119.38" y2="215.9" width="0.1524" layer="91"/>
 <label x="114.3" y="215.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="K1" gate="G$1" pin="3"/>
-<label x="157.48" y="35.56" size="1.778" layer="95"/>
-<pinref part="C11" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="35.56" x2="152.4" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="210.82" y1="38.1" x2="195.58" y2="38.1" width="0.1524" layer="91"/>
+<label x="195.58" y="38.1" size="1.778" layer="95"/>
+<pinref part="JP8" gate="A" pin="2"/>
+</segment>
+<segment>
+<pinref part="JP7" gate="A" pin="3"/>
+<wire x1="50.8" y1="40.64" x2="35.56" y2="40.64" width="0.1524" layer="91"/>
+<label x="35.56" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -15240,15 +15344,6 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <wire x1="251.46" y1="226.06" x2="251.46" y2="215.9" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="251.46" y1="215.9" x2="259.08" y2="215.9" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+2" gate="1" pin="+12V"/>
-<pinref part="Q1" gate="1" pin="S"/>
-<wire x1="180.34" y1="78.74" x2="180.34" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="180.34" y1="76.2" x2="180.34" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="76.2" x2="180.34" y2="76.2" width="0.1524" layer="91"/>
-<junction x="180.34" y="76.2"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -15264,6 +15359,12 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <pinref part="U1" gate="A" pin="VIN"/>
 <wire x1="312.42" y1="223.52" x2="302.26" y2="223.52" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="JP3" gate="A" pin="1"/>
+<pinref part="P+2" gate="1" pin="+12V"/>
+<wire x1="187.96" y1="78.74" x2="180.34" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="78.74" x2="180.34" y2="86.36" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -15274,9 +15375,9 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </segment>
 <segment>
 <pinref part="RTC" gate="-7" pin="1"/>
-<wire x1="243.84" y1="53.34" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="53.34" x2="248.92" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="233.68" y1="50.8" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="50.8" x2="248.92" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="GND"/>
@@ -15286,7 +15387,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="Q2" gate="1" pin="S"/>
-<wire x1="165.1" y1="53.34" x2="165.1" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="45.72" x2="165.1" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
@@ -15342,11 +15443,11 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <wire x1="27.94" y1="172.72" x2="27.94" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP6" gate="A" pin="6"/>
+<pinref part="JP7" gate="A" pin="6"/>
 <wire x1="50.8" y1="33.02" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="GND14" gate="1" pin="GND"/>
 <wire x1="38.1" y1="33.02" x2="38.1" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="A" pin="5"/>
+<pinref part="JP7" gate="A" pin="5"/>
 <wire x1="50.8" y1="35.56" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="35.56" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
 <junction x="38.1" y="33.02"/>
@@ -15373,26 +15474,26 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="167.64" y1="25.4" x2="167.64" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="27.94" x2="167.64" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="38.1" x2="152.4" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="20.32" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="22.86" x2="167.64" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="33.02" x2="152.4" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="K1" gate="G$1" pin="2"/>
 <pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="175.26" y1="27.94" x2="167.64" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="22.86" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="165.1" y1="27.94" x2="167.64" y2="27.94" width="0.1524" layer="91"/>
-<junction x="167.64" y="27.94"/>
+<wire x1="165.1" y1="22.86" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
+<junction x="167.64" y="22.86"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="4"/>
+<pinref part="JP6" gate="A" pin="4"/>
 <wire x1="99.06" y1="68.58" x2="109.22" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="A" pin="6"/>
+<pinref part="JP6" gate="A" pin="6"/>
 <wire x1="99.06" y1="66.04" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="68.58" x2="109.22" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="A" pin="8"/>
+<pinref part="JP6" gate="A" pin="8"/>
 <wire x1="99.06" y1="63.5" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="66.04" x2="109.22" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="JP3" gate="A" pin="10"/>
+<pinref part="JP6" gate="A" pin="10"/>
 <wire x1="99.06" y1="60.96" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="63.5" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="60.96" x2="109.22" y2="58.42" width="0.1524" layer="91"/>
@@ -15410,8 +15511,8 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <net name="D3" class="0">
 <segment>
 <pinref part="RTC" gate="-2" pin="1"/>
-<wire x1="243.84" y1="78.74" x2="233.68" y2="78.74" width="0.1524" layer="91"/>
-<label x="233.68" y="78.74" size="1.778" layer="95"/>
+<wire x1="259.08" y1="78.74" x2="248.92" y2="78.74" width="0.1524" layer="91"/>
+<label x="248.92" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="PD3"/>
@@ -15422,8 +15523,8 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <net name="D7" class="0">
 <segment>
 <pinref part="Q2" gate="1" pin="G"/>
-<wire x1="157.48" y1="60.96" x2="147.32" y2="60.96" width="0.1524" layer="91"/>
-<label x="147.32" y="60.96" size="1.778" layer="95"/>
+<wire x1="157.48" y1="53.34" x2="147.32" y2="53.34" width="0.1524" layer="91"/>
+<label x="147.32" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="PD7"/>
@@ -15438,9 +15539,9 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <label x="63.5" y="203.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="A" pin="1"/>
-<wire x1="314.96" y1="76.2" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
-<label x="307.34" y="76.2" size="1.778" layer="95"/>
+<wire x1="210.82" y1="40.64" x2="195.58" y2="40.64" width="0.1524" layer="91"/>
+<label x="195.58" y="40.64" size="1.778" layer="95"/>
+<pinref part="JP8" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="D9" class="0">
@@ -15458,8 +15559,8 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <net name="SDA" class="0">
 <segment>
 <pinref part="RTC" gate="-3" pin="1"/>
-<wire x1="243.84" y1="73.66" x2="233.68" y2="73.66" width="0.1524" layer="91"/>
-<label x="233.68" y="73.66" size="1.778" layer="95"/>
+<wire x1="259.08" y1="73.66" x2="248.92" y2="73.66" width="0.1524" layer="91"/>
+<label x="248.92" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="PC4"/>
@@ -15470,8 +15571,8 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <net name="SCL" class="0">
 <segment>
 <pinref part="RTC" gate="-4" pin="1"/>
-<wire x1="243.84" y1="68.58" x2="233.68" y2="68.58" width="0.1524" layer="91"/>
-<label x="233.68" y="68.58" size="1.778" layer="95"/>
+<wire x1="259.08" y1="68.58" x2="248.92" y2="68.58" width="0.1524" layer="91"/>
+<label x="248.92" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="PC5"/>
@@ -15486,7 +15587,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <label x="63.5" y="195.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="1"/>
+<pinref part="JP6" gate="A" pin="1"/>
 <wire x1="91.44" y1="71.12" x2="81.28" y2="71.12" width="0.1524" layer="91"/>
 <label x="81.28" y="71.12" size="1.778" layer="95"/>
 </segment>
@@ -15503,7 +15604,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <label x="63.5" y="193.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="9"/>
+<pinref part="JP6" gate="A" pin="9"/>
 <wire x1="91.44" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
 <label x="81.28" y="60.96" size="1.778" layer="95"/>
 </segment>
@@ -15520,7 +15621,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <label x="63.5" y="190.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="7"/>
+<pinref part="JP6" gate="A" pin="7"/>
 <wire x1="91.44" y1="63.5" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
 <label x="81.28" y="63.5" size="1.778" layer="95"/>
 </segment>
@@ -15534,24 +15635,12 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <segment>
 <pinref part="Q2" gate="1" pin="D"/>
 <pinref part="Q1" gate="1" pin="G"/>
-<wire x1="165.1" y1="66.04" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="68.58" x2="172.72" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="58.42" x2="165.1" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="60.96" x2="172.72" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="167.64" y1="76.2" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="76.2" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
-<junction x="165.1" y="68.58"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="Q1" gate="1" pin="D"/>
-<wire x1="180.34" y1="63.5" x2="180.34" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="40.64" x2="175.26" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="40.64" x2="152.4" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="K1" gate="G$1" pin="1"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="35.56" x2="175.26" y2="40.64" width="0.1524" layer="91"/>
-<junction x="175.26" y="40.64"/>
+<wire x1="167.64" y1="68.58" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="68.58" x2="165.1" y2="60.96" width="0.1524" layer="91"/>
+<junction x="165.1" y="60.96"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -15594,9 +15683,9 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </net>
 <net name="TXD" class="0">
 <segment>
-<pinref part="JP6" gate="A" pin="2"/>
-<wire x1="50.8" y1="43.18" x2="38.1" y2="43.18" width="0.1524" layer="91"/>
-<label x="38.1" y="43.18" size="1.778" layer="95"/>
+<pinref part="JP7" gate="A" pin="2"/>
+<wire x1="50.8" y1="43.18" x2="35.56" y2="43.18" width="0.1524" layer="91"/>
+<label x="35.56" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="A" pin="PD1"/>
@@ -15620,7 +15709,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <label x="114.3" y="177.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="5"/>
+<pinref part="JP6" gate="A" pin="5"/>
 <wire x1="91.44" y1="66.04" x2="81.28" y2="66.04" width="0.1524" layer="91"/>
 <label x="81.28" y="66.04" size="1.778" layer="95"/>
 </segment>
@@ -15651,7 +15740,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="JP6" gate="A" pin="1"/>
+<pinref part="JP7" gate="A" pin="1"/>
 <pinref part="C10" gate="G$1" pin="2"/>
 <wire x1="50.8" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="45.72" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
@@ -15727,21 +15816,29 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <wire x1="38.1" y1="73.66" x2="38.1" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP6" gate="A" pin="4"/>
+<pinref part="JP7" gate="A" pin="4"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
 <wire x1="50.8" y1="38.1" x2="30.48" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="38.1" x2="30.48" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="A" pin="2"/>
+<pinref part="JP6" gate="A" pin="2"/>
 <wire x1="99.06" y1="71.12" x2="109.22" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
 <wire x1="109.22" y1="71.12" x2="109.22" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<label x="233.68" y="63.5" size="1.778" layer="95"/>
+<label x="248.92" y="63.5" size="1.778" layer="95"/>
 <pinref part="RTC" gate="-5" pin="1"/>
-<wire x1="243.84" y1="63.5" x2="233.68" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="63.5" x2="248.92" y2="63.5" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="VCC" gate="G$1" pin="+3V3"/>
+<wire x1="195.58" y1="86.36" x2="195.58" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="68.58" x2="182.88" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="68.58" x2="182.88" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="A" pin="3"/>
+<wire x1="182.88" y1="73.66" x2="187.96" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISOSW" class="0">
@@ -15797,38 +15894,38 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </net>
 <net name="D6" class="0">
 <segment>
-<pinref part="JP4" gate="A" pin="2"/>
-<wire x1="314.96" y1="73.66" x2="307.34" y2="73.66" width="0.1524" layer="91"/>
-<label x="307.34" y="73.66" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U2" gate="A" pin="PD6"/>
 <wire x1="109.22" y1="200.66" x2="119.38" y2="200.66" width="0.1524" layer="91"/>
 <label x="114.3" y="200.66" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="314.96" y1="76.2" x2="307.34" y2="76.2" width="0.1524" layer="91"/>
+<label x="307.34" y="76.2" size="1.778" layer="95"/>
+<pinref part="JP4" gate="A" pin="1"/>
+</segment>
 </net>
 <net name="D5" class="0">
-<segment>
-<pinref part="JP4" gate="A" pin="3"/>
-<wire x1="314.96" y1="71.12" x2="307.34" y2="71.12" width="0.1524" layer="91"/>
-<label x="307.34" y="71.12" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U2" gate="A" pin="PD5"/>
 <wire x1="109.22" y1="203.2" x2="119.38" y2="203.2" width="0.1524" layer="91"/>
 <label x="114.3" y="203.2" size="1.778" layer="95"/>
 </segment>
+<segment>
+<wire x1="314.96" y1="73.66" x2="307.34" y2="73.66" width="0.1524" layer="91"/>
+<label x="307.34" y="73.66" size="1.778" layer="95"/>
+<pinref part="JP4" gate="A" pin="2"/>
+</segment>
 </net>
 <net name="D4" class="0">
-<segment>
-<pinref part="JP4" gate="A" pin="4"/>
-<wire x1="314.96" y1="68.58" x2="307.34" y2="68.58" width="0.1524" layer="91"/>
-<label x="307.34" y="68.58" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U2" gate="A" pin="PD4"/>
 <wire x1="109.22" y1="205.74" x2="119.38" y2="205.74" width="0.1524" layer="91"/>
 <label x="114.3" y="205.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="314.96" y1="71.12" x2="307.34" y2="71.12" width="0.1524" layer="91"/>
+<label x="307.34" y="71.12" size="1.778" layer="95"/>
+<pinref part="JP4" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="A2" class="0">
@@ -15877,6 +15974,43 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <pinref part="U2" gate="A" pin="PC0"/>
 <wire x1="109.22" y1="193.04" x2="119.38" y2="193.04" width="0.1524" layer="91"/>
 <label x="114.3" y="193.04" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SENSRXD" class="0">
+<segment>
+<wire x1="210.82" y1="35.56" x2="195.58" y2="35.56" width="0.1524" layer="91"/>
+<label x="195.58" y="35.56" size="1.778" layer="95"/>
+<pinref part="JP8" gate="A" pin="3"/>
+</segment>
+<segment>
+<pinref part="K1" gate="G$1" pin="3"/>
+<label x="154.94" y="30.48" size="1.778" layer="95"/>
+<pinref part="C11" gate="G$1" pin="1"/>
+<wire x1="165.1" y1="30.48" x2="152.4" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="Q1" gate="1" pin="D"/>
+<wire x1="180.34" y1="55.88" x2="180.34" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="35.56" x2="152.4" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="K1" gate="G$1" pin="1"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="30.48" x2="175.26" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="35.56" x2="175.26" y2="35.56" width="0.1524" layer="91"/>
+<junction x="175.26" y="35.56"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="Q1" gate="1" pin="S"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="180.34" y1="68.58" x2="180.34" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="68.58" x2="180.34" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="JP3" gate="A" pin="2"/>
+<wire x1="187.96" y1="76.2" x2="180.34" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="76.2" x2="180.34" y2="68.58" width="0.1524" layer="91"/>
+<junction x="180.34" y="68.58"/>
 </segment>
 </net>
 </nets>

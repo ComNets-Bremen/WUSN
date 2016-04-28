@@ -446,12 +446,18 @@ UsedLibrary="/home/magex/eagle/Würth/Wire_to_Board_Connectors_rev15d.lbr"
 UsedLibrary="/home/magex/eagle/Würth/Wuerth_Elektronik_eiCan_WA-Assembly_Spacer_rev15c.lbr"
 
 [Win_1]
+Type="Control Panel"
+Loc="25 27 624 426"
+State=2
+Number=0
+
+[Win_2]
 Type="Schematic Editor"
-Loc="678 189 1277 588"
+Loc="1848 27 2447 426"
 State=1
 Number=1
 File="MoleNet_v21.sch"
-View="254.19 -8.13255 416.422 101.019"
+View="29.896 -1.49086 433.58 270.113"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
@@ -490,17 +496,17 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
-Views=" 1: 254.19 -8.13255 416.422 101.019"
+Views=" 1: 29.896 -1.49086 433.58 270.113"
 Sheet="1"
 
-[Win_2]
+[Win_3]
 Type="Board Editor"
-Loc="0 0 599 399"
+Loc="1872 27 2471 426"
 State=1
 Number=2
 File="MoleNet_v21.brd"
-View="-4.84165 -2.07926 85.0292 73.0224"
-WireWidths=" 0 0.254 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064"
+View="10.4769 -4.04822 73.0707 48.864"
+WireWidths=" 0 0.254 0.3048 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.6096"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
 ViaDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
@@ -539,14 +545,8 @@ AddLevel=2
 PadsSameType=0
 Layer=16
 
-[Win_3]
-Type="Control Panel"
-Loc="25 27 624 426"
-State=2
-Number=0
-
 [Desktop]
-Screen="1280 800"
+Screen="2960 1050"
 Window="Win_1"
 Window="Win_2"
 Window="Win_3"
