@@ -15328,14 +15328,14 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <label x="114.3" y="215.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="210.82" y1="38.1" x2="195.58" y2="38.1" width="0.1524" layer="91"/>
-<label x="195.58" y="38.1" size="1.778" layer="95"/>
-<pinref part="JP8" gate="A" pin="2"/>
-</segment>
-<segment>
 <pinref part="JP7" gate="A" pin="3"/>
 <wire x1="50.8" y1="40.64" x2="35.56" y2="40.64" width="0.1524" layer="91"/>
 <label x="35.56" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="210.82" y1="35.56" x2="195.58" y2="35.56" width="0.1524" layer="91"/>
+<label x="195.58" y="35.56" size="1.778" layer="95"/>
+<pinref part="JP8" gate="A" pin="3"/>
 </segment>
 </net>
 <net name="+12V" class="0">
@@ -15978,15 +15978,15 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </net>
 <net name="SENSRXD" class="0">
 <segment>
-<wire x1="210.82" y1="35.56" x2="195.58" y2="35.56" width="0.1524" layer="91"/>
-<label x="195.58" y="35.56" size="1.778" layer="95"/>
-<pinref part="JP8" gate="A" pin="3"/>
-</segment>
-<segment>
 <pinref part="K1" gate="G$1" pin="3"/>
 <label x="154.94" y="30.48" size="1.778" layer="95"/>
 <pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="30.48" x2="152.4" y2="30.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="210.82" y1="38.1" x2="195.58" y2="38.1" width="0.1524" layer="91"/>
+<label x="195.58" y="38.1" size="1.778" layer="95"/>
+<pinref part="JP8" gate="A" pin="2"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -16016,16 +16016,6 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="208,1,139.7,53.34,N$10,sup,,,,"/>
-<approved hash="208,1,101.6,30.48,N$10,sup,,,,"/>
-<approved hash="208,1,109.22,43.18,N$10,sup,,,,"/>
-<approved hash="208,1,17.78,165.1,N$10,sup,,,,"/>
-<approved hash="208,1,25.4,165.1,N$10,sup,,,,"/>
-<approved hash="208,1,215.9,165.1,N$10,sup,,,,"/>
-<approved hash="208,1,210.82,157.48,N$10,out,,,,"/>
-<approved hash="208,1,147.32,127,N$10,sup,,,,"/>
-</errors>
 </schematic>
 </drawing>
 </eagle>
