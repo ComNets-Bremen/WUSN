@@ -1,4 +1,4 @@
-changes to version 2:
+changes since version 2:
 - change supply power on sensor connector (3.3 V or battery; JP3)
 - change input port for sensor data (hardware serial or D8; JP8)
 
