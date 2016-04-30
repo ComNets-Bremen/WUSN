@@ -14817,16 +14817,16 @@ Created 2014-12-22, aslant tao&lt;br&gt;
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="Q1" library="transistor-small-signal" deviceset="BS250" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="0207/10"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="0207/10" value="100k"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="L1" library="inductor-neosid" deviceset="BS" device="11"/>
-<part name="C1" library="resistor" deviceset="CPOL-EU" device="E2.5-6" value="10uF"/>
-<part name="C2" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="C3" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="C4" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="L1" library="inductor-neosid" deviceset="BS" device="11" value="10mH"/>
+<part name="C1" library="resistor" deviceset="CPOL-EU" device="E2.5-6" value="4.7uF"/>
+<part name="C2" library="resistor" deviceset="C-EU" device="025-025X050" value="1uF"/>
+<part name="C3" library="resistor" deviceset="C-EU" device="025-025X050" value="1uF"/>
+<part name="C4" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="C6" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="C6" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
@@ -14840,17 +14840,17 @@ Created 2014-12-22, aslant tao&lt;br&gt;
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" deviceset="A3L-LOC" device=""/>
-<part name="C5" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="C5" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X6" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
-<part name="C9" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="0207/10"/>
+<part name="C9" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="0207/10" value="10k"/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
-<part name="Q3" library="crystal" deviceset="CRYSTAL" device="HC18U-V"/>
-<part name="C7" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="C8" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="Q3" library="crystal" deviceset="CRYSTAL" device="HC18U-V" value="8MHz"/>
+<part name="C7" library="resistor" deviceset="C-EU" device="025-025X050" value="22pF"/>
+<part name="C8" library="resistor" deviceset="C-EU" device="025-025X050" value="22pF"/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="U4" library="Atmel_By_element14_Batch_1-00" deviceset="ATMEGA328P-PU" device=""/>
@@ -14968,9 +14968,15 @@ Created 2014-12-22, aslant tao&lt;br&gt;
 <instance part="C1" gate="G$1" x="251.46" y="205.74"/>
 <instance part="C2" gate="G$1" x="264.16" y="205.74"/>
 <instance part="C3" gate="G$1" x="325.12" y="205.74"/>
-<instance part="C4" gate="G$1" x="20.32" y="180.34"/>
+<instance part="C4" gate="G$1" x="20.32" y="180.34" smashed="yes">
+<attribute name="NAME" x="19.939" y="181.864" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="22.479" y="181.864" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND3" gate="1" x="20.32" y="152.4"/>
-<instance part="C6" gate="G$1" x="35.56" y="180.34"/>
+<instance part="C6" gate="G$1" x="35.56" y="180.34" smashed="yes">
+<attribute name="NAME" x="35.179" y="181.864" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="37.719" y="181.864" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND4" gate="1" x="35.56" y="152.4"/>
 <instance part="+3V2" gate="G$1" x="27.94" y="233.68" smashed="yes">
 <attribute name="VALUE" x="25.4" y="234.95" size="1.778" layer="96"/>
@@ -14995,9 +15001,15 @@ Created 2014-12-22, aslant tao&lt;br&gt;
 </instance>
 <instance part="GND12" gate="1" x="271.78" y="195.58"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="C5" gate="G$1" x="27.94" y="180.34"/>
+<instance part="C5" gate="G$1" x="27.94" y="180.34" smashed="yes">
+<attribute name="NAME" x="27.559" y="181.864" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="30.099" y="181.864" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND13" gate="1" x="27.94" y="152.4"/>
-<instance part="JP2" gate="A" x="99.06" y="30.48"/>
+<instance part="JP2" gate="A" x="99.06" y="30.48" smashed="yes">
+<attribute name="NAME" x="96.52" y="41.275" size="1.778" layer="95"/>
+<attribute name="VALUE" x="92.71" y="20.32" size="1.778" layer="96"/>
+</instance>
 <instance part="GND14" gate="1" x="83.82" y="20.32"/>
 <instance part="+3V8" gate="G$1" x="76.2" y="35.56" smashed="yes">
 <attribute name="VALUE" x="73.66" y="36.83" size="1.778" layer="96"/>
@@ -15007,9 +15019,18 @@ Created 2014-12-22, aslant tao&lt;br&gt;
 <instance part="+3V9" gate="G$1" x="83.82" y="71.12" smashed="yes">
 <attribute name="VALUE" x="81.28" y="72.39" size="1.778" layer="96"/>
 </instance>
-<instance part="Q3" gate="G$1" x="48.26" y="185.42"/>
-<instance part="C7" gate="G$1" x="43.18" y="180.34"/>
-<instance part="C8" gate="G$1" x="53.34" y="180.34"/>
+<instance part="Q3" gate="G$1" x="48.26" y="185.42" smashed="yes">
+<attribute name="NAME" x="46.99" y="187.706" size="1.778" layer="95"/>
+<attribute name="VALUE" x="45.72" y="181.61" size="1.778" layer="96"/>
+</instance>
+<instance part="C7" gate="G$1" x="43.18" y="180.34" smashed="yes">
+<attribute name="NAME" x="42.799" y="174.244" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="45.339" y="171.704" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C8" gate="G$1" x="53.34" y="180.34" smashed="yes">
+<attribute name="NAME" x="52.959" y="174.244" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="55.499" y="171.704" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND16" gate="1" x="43.18" y="152.4"/>
 <instance part="GND17" gate="1" x="53.34" y="152.4"/>
 <instance part="U4" gate="A" x="91.44" y="203.2"/>

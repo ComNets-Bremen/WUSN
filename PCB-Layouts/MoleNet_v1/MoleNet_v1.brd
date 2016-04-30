@@ -2210,7 +2210,7 @@ design rules under a new name.</description>
 <element name="JP1" library="pinhead" package="1X02" value="" x="4.1275" y="63.5" rot="R180"/>
 <element name="Q2" library="transistor-small-signal" package="SOT54E" value="BS170" x="11.7475" y="38.1" rot="R270"/>
 <element name="Q1" library="transistor-small-signal" package="SOT54E" value="BS250" x="6.6675" y="38.1" rot="R90"/>
-<element name="R2" library="resistor" package="0207/10" value="" x="2.8575" y="45.72" rot="R90"/>
+<element name="R2" library="resistor" package="0207/10" value="100k" x="2.8575" y="45.72" rot="R90"/>
 <element name="RTC" library="con-phoenix-254" package="7POL254" value="" x="66.3575" y="54.61" smashed="yes" rot="R180">
 <attribute name="OC_NEWARK" value="unknown" x="66.3575" y="54.61" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="66.3575" y="54.61" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2219,20 +2219,20 @@ design rules under a new name.</description>
 <attribute name="NAME" x="75.6285" y="53.848" size="1.27" layer="25"/>
 <attribute name="VALUE" x="75.5015" y="57.658" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="L1" library="inductor-neosid" package="BS11" value="" x="52.4256" y="27.305" rot="R180">
+<element name="L1" library="inductor-neosid" package="BS11" value="10mH" x="52.4256" y="27.305" rot="R180">
 <attribute name="OC_FARNELL" value="unknown" x="52.4256" y="27.305" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="" x="52.4256" y="27.305" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="52.4256" y="27.305" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="" x="52.4256" y="27.305" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C1" library="resistor" package="E2,5-6" value="10uF" x="4.1275" y="55.88" rot="R180"/>
-<element name="C2" library="resistor" package="C025-025X050" value="" x="9.2075" y="52.07" rot="R90"/>
-<element name="C3" library="resistor" package="C025-025X050" value="" x="23.1775" y="52.07" rot="R90"/>
-<element name="C4" library="resistor" package="C025-025X050" value="" x="51.1175" y="35.56" smashed="yes">
+<element name="C1" library="resistor" package="E2,5-6" value="4.7uF" x="4.1275" y="55.88" rot="R180"/>
+<element name="C2" library="resistor" package="C025-025X050" value="1uF" x="9.2075" y="52.07" rot="R90"/>
+<element name="C3" library="resistor" package="C025-025X050" value="1uF" x="23.1775" y="52.07" rot="R90"/>
+<element name="C4" library="resistor" package="C025-025X050" value="100nF" x="51.1175" y="35.56" smashed="yes">
 <attribute name="NAME" x="53.9115" y="34.544" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="48.8315" y="32.766" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="C6" library="resistor" package="C025-025X050" value="" x="51.1175" y="38.100003125" smashed="yes">
+<element name="C6" library="resistor" package="C025-025X050" value="100nF" x="51.1175" y="38.100003125" smashed="yes">
 <attribute name="NAME" x="53.9115" y="38.354003125" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="48.8315" y="35.306003125" size="1.27" layer="27" ratio="10"/>
 </element>
@@ -2243,18 +2243,18 @@ design rules under a new name.</description>
 <attribute name="MF" value="JOHNSON COMPONENTS" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="1019328" x="81.9023" y="7.4422" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="C5" library="resistor" package="C025-025X050" value="" x="32.0675" y="41.91" rot="R90"/>
+<element name="C5" library="resistor" package="C025-025X050" value="100nF" x="32.0675" y="41.91" rot="R90"/>
 <element name="JP2" library="pinhead" package="1X06" value="" x="19.3675" y="63.5" rot="R180"/>
-<element name="C9" library="resistor" package="C025-025X050" value="" x="29.5275" y="62.23" rot="R90"/>
-<element name="R1" library="resistor" package="0207/10" value="" x="23.1775" y="58.42" rot="R180"/>
-<element name="Q3" library="crystal" package="HC18U-V" value="" x="28.2575" y="33.02" rot="R270">
+<element name="C9" library="resistor" package="C025-025X050" value="100nF" x="29.5275" y="62.23" rot="R90"/>
+<element name="R1" library="resistor" package="0207/10" value="10k" x="23.1775" y="58.42" rot="R180"/>
+<element name="Q3" library="crystal" package="HC18U-V" value="8MHz" x="28.2575" y="33.02" rot="R270">
 <attribute name="OC_FARNELL" value="unknown" x="28.2575" y="33.02" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="" x="28.2575" y="33.02" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="28.2575" y="33.02" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="" x="28.2575" y="33.02" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="C7" library="resistor" package="C025-025X050" value="" x="21.9075" y="35.56" rot="R180"/>
-<element name="C8" library="resistor" package="C025-025X050" value="" x="21.9075" y="30.48" rot="R180"/>
+<element name="C7" library="resistor" package="C025-025X050" value="22pF" x="21.9075" y="35.56" rot="R180"/>
+<element name="C8" library="resistor" package="C025-025X050" value="22pF" x="21.9075" y="30.48" rot="R180"/>
 <element name="U4" library="Atmel_By_element14_Batch_1-00" package="DIP254P762X457-28" value="ATMEGA328P-PU" x="43.4975" y="22.86">
 <attribute name="OC_FARNELL" value="1715487" x="43.4975" y="22.86" size="1.778" layer="27" display="off"/>
 <attribute name="SUPPLIER" value="Atmel" x="43.4975" y="22.86" size="1.778" layer="27" display="off"/>

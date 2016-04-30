@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="100" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -15075,16 +15075,16 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="Q1" library="transistor-small-signal" deviceset="BS250" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="0207/10"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="0207/10" value="100k"/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="L1" library="inductor-neosid" deviceset="BS" device="11"/>
-<part name="C1" library="resistor" deviceset="CPOL-EU" device="E2.5-6" value="10uF"/>
-<part name="C2" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="C3" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="C4" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="L1" library="inductor-neosid" deviceset="BS" device="11" value="10mH"/>
+<part name="C1" library="resistor" deviceset="CPOL-EU" device="E2.5-6" value="4.7uF"/>
+<part name="C2" library="resistor" deviceset="C-EU" device="025-025X050" value="1uF"/>
+<part name="C3" library="resistor" deviceset="C-EU" device="025-025X050" value="1uF"/>
+<part name="C4" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="C6" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="C6" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
@@ -15098,17 +15098,17 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" deviceset="A3L-LOC" device=""/>
-<part name="C5" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="C5" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="JP7" library="pinhead" deviceset="PINHD-1X6" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
-<part name="C10" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="R1" library="resistor" deviceset="R-EU_" device="0207/10"/>
+<part name="C10" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
+<part name="R1" library="resistor" deviceset="R-EU_" device="0207/10" value="10k"/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
-<part name="Q3" library="crystal" deviceset="CRYSTAL" device="HC18U-V"/>
-<part name="C7" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="C8" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="Q3" library="crystal" deviceset="CRYSTAL" device="HC18U-V" value="8MHz"/>
+<part name="C7" library="resistor" deviceset="C-EU" device="025-025X050" value="22pF"/>
+<part name="C8" library="resistor" deviceset="C-EU" device="025-025X050" value="22pF"/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="U2" library="Atmel_By_element14_Batch_1-00" deviceset="ATMEGA328P-PU" device=""/>
@@ -15117,10 +15117,10 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <part name="JP6" library="pinhead" deviceset="PINHD-2X5" device="" value="ISP"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
-<part name="C9" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="C9" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="C11" library="resistor" deviceset="C-EU" device="025-025X050"/>
-<part name="C12" library="resistor" deviceset="C-EU" device="025-025X050"/>
+<part name="C11" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
+<part name="C12" library="resistor" deviceset="C-EU" device="025-025X050" value="100nF"/>
 <part name="JP2" library="pinhead" deviceset="PINHD-2X3" device=""/>
 <part name="JP5" library="pinhead" deviceset="PINHD-1X4" device=""/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X3" device=""/>
@@ -15255,9 +15255,15 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <instance part="C1" gate="G$1" x="289.56" y="213.36"/>
 <instance part="C2" gate="G$1" x="302.26" y="213.36"/>
 <instance part="C3" gate="G$1" x="363.22" y="213.36"/>
-<instance part="C4" gate="G$1" x="20.32" y="177.8"/>
+<instance part="C4" gate="G$1" x="20.32" y="177.8" smashed="yes">
+<attribute name="NAME" x="19.939" y="179.324" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="22.479" y="179.324" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND3" gate="1" x="20.32" y="149.86"/>
-<instance part="C6" gate="G$1" x="35.56" y="177.8"/>
+<instance part="C6" gate="G$1" x="35.56" y="177.8" smashed="yes">
+<attribute name="NAME" x="35.179" y="179.324" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="37.719" y="179.324" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND4" gate="1" x="35.56" y="149.86"/>
 <instance part="+3V2" gate="G$1" x="27.94" y="231.14" smashed="yes">
 <attribute name="VALUE" x="25.4" y="232.41" size="1.778" layer="96"/>
@@ -15282,9 +15288,15 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 </instance>
 <instance part="GND12" gate="1" x="309.88" y="203.2"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="C5" gate="G$1" x="27.94" y="177.8"/>
+<instance part="C5" gate="G$1" x="27.94" y="177.8" smashed="yes">
+<attribute name="NAME" x="27.559" y="179.324" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="30.099" y="179.324" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND13" gate="1" x="27.94" y="149.86"/>
-<instance part="JP7" gate="A" x="53.34" y="38.1"/>
+<instance part="JP7" gate="A" x="53.34" y="38.1" smashed="yes">
+<attribute name="NAME" x="50.8" y="48.895" size="1.778" layer="95"/>
+<attribute name="VALUE" x="46.99" y="27.94" size="1.778" layer="96"/>
+</instance>
 <instance part="GND14" gate="1" x="38.1" y="27.94"/>
 <instance part="+3V8" gate="G$1" x="30.48" y="43.18" smashed="yes">
 <attribute name="VALUE" x="27.94" y="44.45" size="1.778" layer="96"/>
@@ -15294,9 +15306,18 @@ Details see: &lt;a href="http://katalog.we-online.de/en/em/TBL_5_00_2417_HORIZON
 <instance part="+3V9" gate="G$1" x="38.1" y="78.74" smashed="yes">
 <attribute name="VALUE" x="35.56" y="80.01" size="1.778" layer="96"/>
 </instance>
-<instance part="Q3" gate="G$1" x="48.26" y="182.88"/>
-<instance part="C7" gate="G$1" x="43.18" y="177.8"/>
-<instance part="C8" gate="G$1" x="53.34" y="177.8"/>
+<instance part="Q3" gate="G$1" x="48.26" y="182.88" smashed="yes">
+<attribute name="NAME" x="46.99" y="185.166" size="1.778" layer="95"/>
+<attribute name="VALUE" x="45.72" y="179.07" size="1.778" layer="96"/>
+</instance>
+<instance part="C7" gate="G$1" x="43.18" y="177.8" smashed="yes">
+<attribute name="NAME" x="42.799" y="171.704" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="45.339" y="169.164" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C8" gate="G$1" x="53.34" y="177.8" smashed="yes">
+<attribute name="NAME" x="52.959" y="171.704" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="55.499" y="169.164" size="1.778" layer="96" rot="R90"/>
+</instance>
 <instance part="GND16" gate="1" x="43.18" y="149.86"/>
 <instance part="GND17" gate="1" x="53.34" y="149.86"/>
 <instance part="U2" gate="A" x="91.44" y="200.66"/>
