@@ -6,6 +6,8 @@ server)
 This is an active project and the files in this directory (and the structure of
 the project itself) are subject to change!
 
+![The WUSN node](https://github.com/ComNets-Bremen/WUSN/blob/master/images/WUSN_512.jpg)
+
 ## Prerequisites
 
 The following Arduino libraries are required:
