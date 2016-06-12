@@ -17,7 +17,9 @@ The following Arduino libraries are required:
 - RV8523: <https://github.com/watterott/Arduino-Libs>
 - spieep: <https://bitbucket.org/spirilis/spieep/>
 
-## Setting up the Arduino IDE for the MoleNet
+## MoleNet (rev. 1.0)
+
+### Settings for the Arduino IDEa
 
 Arduino IDE:
 
@@ -30,3 +32,31 @@ Baud-rates:
 - reading from MoleNet node: 1200 Baud (don't change!!!)
 - reading from MoleNet simple Gateway: 115200 Baud
 - setting the RTC: 9600 Baud (could also be changed)
+
+### Data Format (simple Gateway)
+
+The app just listens for packets and print the payload with correct formatting
+The data format is as follows:
+
+    #[PACKETNUMBER][NODEID] 'D'YEAR/MONTH/DAY 't'HOUR:MINUTE 'W'VWCRAWVALUE 'T'TEMPRAWVALUE CHECKSUM SUCCESSINDICATOR   ['RX_RSSI:'VALUE] - 'ACK sent.'
+
+example:
+
+    #[2][2] D16/3/30 t15:36 W0468 T0594 68 1    [RX_RSSI:-28] - ACK sent.
+
+### Set the RTC time (Set_RTC)
+The program prints current time of RTC to serial port every second. The time
+can be changed by sending the new value using the serial line and terminate it
+with a carriage return. Possible commands are:
+
+- y : change the year, enter full year (e.g., 2016)
+- M : change the month
+- d : change the day
+- h : change the hour
+- m : change the minute
+- s : change the second
+- w : change the weekday (0: Monday, 1: Tuesday...)
+
+### Manually trigger a measurement
+
+Pull pin `Int1` at the RTC to ground. One tip is enough
