@@ -1,4 +1,4 @@
-# WUSN: MoleNet
+# MoleNet: A Wireless Underground Sensor Network Platform
 ![MoleNet Logo](https://github.com/ComNets-Bremen/WUSN/blob/master/images/molenet_512.png)
 
 Wireless Underground Sensor Network platform (PCB, Arduino-Source and example
