@@ -1,12 +1,11 @@
 # WUSN: MoleNet
+![MoleNet Logo](https://github.com/ComNets-Bremen/WUSN/blob/master/images/molenet_512.png)
 
 Wireless Underground Sensor Network platform (PCB, Arduino-Source and example
 server)
 
 This is an active project and the files in this directory (and the structure of
 the project itself) are subject to change!
-
-![The WUSN node](https://github.com/ComNets-Bremen/WUSN/blob/master/images/WUSN_512.jpg)
 
 ## Prerequisites
 
@@ -18,6 +17,8 @@ The following Arduino libraries are required:
 - spieep: <https://bitbucket.org/spirilis/spieep/>
 
 ## MoleNet (rev. 1.0)
+
+![The WUSN node](https://github.com/ComNets-Bremen/WUSN/blob/master/images/WUSN_512.jpg)
 
 ### Settings for the Arduino IDEa
 
