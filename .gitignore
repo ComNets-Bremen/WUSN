@@ -37,3 +37,6 @@ db.sqlite3
 
 # Misc
 *.swp
+
+# Django migrations
+migrations
