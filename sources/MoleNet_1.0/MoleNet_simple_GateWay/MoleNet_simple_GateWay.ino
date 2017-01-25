@@ -1,3 +1,7 @@
+#include <SPIEEP.h>
+
+#include <SPI.h>
+
 /******************************************************************************
  * MoleNet - A Wireless Underground Sensor Network
  *

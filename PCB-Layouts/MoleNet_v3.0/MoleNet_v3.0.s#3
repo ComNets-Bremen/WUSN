@@ -11641,13 +11641,12 @@ Source: www.kingbright.com</description>
 </segment>
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="-81.28" y1="-10.16" x2="-81.28" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-81.28" y1="-7.62" x2="-96.52" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <label x="-96.52" y="-7.62" size="1.778" layer="95"/>
-<wire x1="-81.28" y1="-10.16" x2="-81.28" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-81.28" y="-10.16"/>
-<junction x="-81.28" y="-5.08"/>
+<junction x="-81.28" y="-7.62"/>
 <wire x1="-81.28" y1="-7.62" x2="-81.28" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="-96.52" y1="-7.62" x2="-81.28" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C10" gate="G$1" pin="1"/>
@@ -11990,7 +11989,6 @@ Source: www.kingbright.com</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="-81.28" y1="5.08" x2="-81.28" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
-<junction x="-81.28" y="5.08"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="4"/>
@@ -12547,6 +12545,13 @@ Source: www.kingbright.com</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="204,1,233.68,78.74,U3,RESET,,,,"/>
+<approved hash="202,1,233.68,86.36,U3,DIO2,,,,"/>
+<approved hash="202,1,259.08,83.82,U3,DIO3,,,,"/>
+<approved hash="202,1,233.68,83.82,U3,DIO1,,,,"/>
+<approved hash="202,1,233.68,81.28,U3,DIO5,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
