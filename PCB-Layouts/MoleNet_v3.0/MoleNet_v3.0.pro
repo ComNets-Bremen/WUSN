@@ -1,25 +1,25 @@
 EAGLE AutoRouter Statistics:
 
-Job           : /home/idrees/eagle-7.6.0/projects/examples/MoleNet_v3.0/MoleNet_v3.0.brd
+Job           : /home/idrees/Documents/WUSN/WUSN/PCB-Layouts/MoleNet_v3.0/MoleNet_v3.0.brd
 
-Start at      : 15:26:45 (11.10.16)
-End at        : 15:26:56 (11.10.16)
-Elapsed time  : 00:00:07
+Start at      : 14:21:03 (25.01.17)
+End at        : 14:21:11 (25.01.17)
+Elapsed time  : 00:00:03
 
-Signals       :    58   RoutingGrid: 12.5 mil  Layers: 2
-Connections   :   151   predefined:  42 ( 0 Vias )
+Signals       :    61   RoutingGrid: 25 mil  Layers: 2
+Connections   :   171   predefined:  71 ( 2 Vias )
 
-Router memory :   253752
+Router memory :   85204
 
-Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
+Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:00  00:00:01  00:00:02  00:00:01  00:00:02  00:00:01
-Number of Ripups  :         0         0         0         0         0         0
-max. Level        :         0         0         0         0         0         0
-max. Total        :         0         0         0         0         0         0
+Time per pass     :  00:00:00  00:00:01  00:00:01  00:00:00  00:00:01
+Number of Ripups  :         0         0         0         0         0
+max. Level        :         0         0         0         0         0
+max. Total        :         0         0         0         0         0
 
-Routed            :        18       109       109       109       109       109
-Vias              :         0       109        48        32        24        25
-Resolution        :    39.7 %   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
+Routed            :       100       100       100       100       100
+Vias              :       179        63        55        55        53
+Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
 Final             : 100.0% finished
