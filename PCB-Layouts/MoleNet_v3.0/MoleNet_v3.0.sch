@@ -9488,8 +9488,8 @@ grid 2.54 mm</description>
 <wire x1="4" y1="-3" x2="4" y2="3" width="0.127" layer="21"/>
 <wire x1="4" y1="3" x2="-4" y2="3" width="0.127" layer="21"/>
 <wire x1="-4" y1="3" x2="-4" y2="-3" width="0.127" layer="21"/>
-<text x="-4" y="3.5" size="0.6096" layer="25">Name</text>
-<text x="-4" y="-4" size="0.6096" layer="27">Value</text>
+<text x="-3.81" y="3.81" size="0.6096" layer="21" ratio="5" distance="1">U6</text>
+<text x="-3.81" y="-3.81" size="0.6096" layer="21" ratio="5" distance="1">Reset</text>
 </package>
 </packages>
 <symbols>
@@ -9539,8 +9539,8 @@ grid 2.54 mm</description>
 <wire x1="12.8" y1="6.8" x2="12.8" y2="-6" width="0.127" layer="21"/>
 <wire x1="12.8" y1="-6" x2="-5.2" y2="-6" width="0.127" layer="21"/>
 <wire x1="-5.2" y1="-6" x2="-5.2" y2="-5.6" width="0.127" layer="21"/>
-<text x="-5.2" y="7.6" size="1.27" layer="25">Name</text>
-<text x="-5.2" y="-7.6" size="1.27" layer="27">Value</text>
+<text x="-5.08" y="7.62" size="1.27" layer="21">U3</text>
+<text x="-5.08" y="-7.62" size="1.27" layer="21">Sen Connect</text>
 </package>
 </packages>
 <symbols>
@@ -11761,9 +11761,9 @@ Source: www.kingbright.com</description>
 </segment>
 <segment>
 <pinref part="GND19" gate="1" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="261.62" y1="129.54" x2="261.62" y2="134.62" width="0.1524" layer="91" style="longdash"/>
 <pinref part="GND21" gate="1" pin="GND"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="261.62" y1="129.54" x2="261.62" y2="134.62" width="0.1524" layer="91"/>
 <junction x="261.62" y="129.54"/>
 </segment>
 <segment>
@@ -11920,6 +11920,7 @@ Source: www.kingbright.com</description>
 <junction x="-81.28" y="-5.08"/>
 <wire x1="-81.28" y1="-7.62" x2="-81.28" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="-7.62" x2="-81.28" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-81.28" y="-7.62"/>
 </segment>
 <segment>
 <pinref part="C10" gate="G$1" pin="1"/>
@@ -12800,6 +12801,13 @@ Source: www.kingbright.com</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="204,1,233.68,78.74,U$1,RESET,,,,"/>
+<approved hash="202,1,233.68,86.36,U$1,DIO2,,,,"/>
+<approved hash="202,1,259.08,83.82,U$1,DIO3,,,,"/>
+<approved hash="202,1,233.68,83.82,U$1,DIO1,,,,"/>
+<approved hash="202,1,233.68,81.28,U$1,DIO5,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
