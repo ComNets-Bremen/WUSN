@@ -1,0 +1,26 @@
+SPIEEP	KEYWORD3
+
+begin	KEYWORD2
+begin_spi	KEYWORD2
+end	KEYWORD2
+verify_enabled	KEYWORD2
+pagesize	KEYWORD2
+wren	KEYWORD2
+is_wren	KEYWORD2
+wrdi	KEYWORD2
+dpd	KEYWORD2
+rdid	KEYWORD2
+sleepmode	KEYWORD2
+wakeup	KEYWORD2
+readstatus	KEYWORD2
+writestatus	KEYWORD2
+test_chip	KEYWORD2
+read	KEYWORD2
+readn	KEYWORD2
+write	KEYWORD2
+writen	KEYWORD2
+read_page	KEYWORD2
+write_page	KEYWORD2
+chip_erase	KEYWORD2
+page_erase	KEYWORD2
+

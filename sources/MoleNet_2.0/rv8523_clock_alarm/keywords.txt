@@ -1,0 +1,76 @@
+#######################################
+# Syntax Coloring Map For RV8523
+####################################### 
+# Class (KEYWORD1)
+#######################################
+
+RV8523_RTC	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+####################################### 
+
+initializeRTC	KEYWORD2
+startRTC	KEYWORD2
+stopRTC KEYWORD2
+setTimeMode	KEYWORD2
+setClockTime	KEYWORD2
+getClockTime	KEYWORD2
+getCurrentMinutes	KEYWORD2
+
+beginAlarm	KEYWORD2
+alarmInterrupt	KEYWORD2
+alarmInt	KEYWORD2
+
+clearAllAlarm	KEYWORD2
+setAlarmType	KEYWORD2
+setAlarmTime	KEYWORD2
+getAlarmTime	KEYWORD2
+resetAlarm	KEYWORD2
+
+getAlarmConfig	KEYWORD2
+activateAlarm	KEYWORD2
+deactivateAlarm	KEYWORD2
+resetInterrupt	KEYWORD2
+resetCtrl	KEYWORD2
+readRegister	KEYWORD2
+batterySwitchOver	KEYWORD2    
+debugCurrentTime	KEYWORD2
+debugAlarm	KEYWORD2
+########## Enums
+TimeMode	KEYWORD1
+Register	KEYWORD1
+AlarmType	KEYWORD1
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+ 
+TM_12HOUR	LITERAL1
+TM_24HOUR	LITERAL1
+CONTROL1	LITERAL1
+CONTROL2	LITERAL1
+CONTROL3	LITERAL1
+SECONDS	LITERAL1
+MINUTES	LITERAL1
+HOURS	LITERAL1
+DAYS	LITERAL1
+WEEKDAYS	LITERAL1
+MONTHS	LITERAL1
+YEARS	LITERAL1
+MINUTE_ALARM	LITERAL1
+HOUR_ALARM	LITERAL1
+DAY_ALARM	LITERAL1
+WEEKDAY_ALARM	LITERAL1
+FREQUENCY_OFFSET	LITERAL1
+TIMER_AND_CLKOUT	LITERAL1
+TIMER_A_CLOCK	LITERAL1
+TIMER_A	LITERAL1
+TIMER_B_CLOCK	LITERAL1
+TIMER_B	LITERAL1
+AT_MINUTE	LITERAL1
+AT_HOUR	LITERAL1
+AT_DAY	LITERAL1
+AT_WEEKDAY	LITERAL1
+AT_INVALID	LITERAL1
+AT_INCREMENTAL_MINUTE	LITERAL1
