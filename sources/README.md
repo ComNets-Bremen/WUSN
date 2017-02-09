@@ -5,6 +5,10 @@
 This directory contains the first working version with the most important
 functionalities
 
+## MoleNet_2.0
+
+This directory contains the improved version, supporting static routing, wireless configuration and many other functionalities
+
 ## Maintenance
 
 This directory contains a maintenance app for MoleNet to
