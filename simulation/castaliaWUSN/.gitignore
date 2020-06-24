@@ -1,0 +1,10 @@
+/src/CastaliaBin
+/src/CastaliaBin_dbg
+/out
+*_m.h
+*_m.cc
+src/Makefile
+.cmdenv-log
+.qtenvrc
+.vscode
+Castalia-Trace.txt
