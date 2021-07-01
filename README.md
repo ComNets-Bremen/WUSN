@@ -20,7 +20,7 @@ The following Arduino libraries are required:
 
 ![The WUSN node](https://github.com/ComNets-Bremen/WUSN/blob/master/images/WUSN_512.jpg)
 
-### Settings for the Arduino IDEa
+### Settings for the Arduino IDE
 
 Arduino IDE:
 
