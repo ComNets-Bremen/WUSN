@@ -5,6 +5,10 @@
 This directory contains the first working version with the most important
 functionalities
 
+## MoleNet_1.1
+
+Current development version with some improvements in the libraries
+
 ## Maintenance
 
 This directory contains a maintenance app for MoleNet to
