@@ -1,12 +1,13 @@
 #include <avr/io.h>
 #include <avr/power.h>
 #include <LowPower.h>      //from: https://github.com/LowPowerLab/LowPower
-#include <RFM69.h>        //from: https://www.github.com/lowpowerlab/rfm69
+#include <RFM69.h>         //from: https://www.github.com/lowpowerlab/rfm69
 #include <SDI12.h>
-#include <RV8523.h>        //from: https://github.com/watterott/Arduino-Libs
-#include <RV8523ALARM.h>  //own library
 #include <avr/interrupt.h>
 #include "definitions.h"
+
+#include "Wire.h"
+#include <PCF8523.h>
 
 
 #include <SPI.h>
@@ -14,7 +15,6 @@
 
 #define SENSOR_PWPIN    7         // Sensor Power
 #define SENSOR_PIN      8         // Sensor data pin
-#define INI_ALARMTYPE   ('m')
 #define RTC_IRQ_PIN     3         // The Pin ID
 #define NODEID          1
 #define EEPROM_CSPIN    9         // CS for EEPROM
@@ -22,15 +22,18 @@
 
 #define RADIOPOWERLEVEL  31        //31: send with full power
 
+#define SENDMINUTE      0         // Send every full hour
+
+#define UTCOFFSET       2         // Time offset while programming this sketch to set the RTC to UTC
+
 // TODO:
-// Migrate to https://github.com/SpellFoundry/PCF8523 for RTC / Alarm
 // Use new flash lib?
 // Use internal EEPROM (EEPROM.h) for config data
 
+
 SDI12 mySDI12(SENSOR_PIN);
 
-RV8523ALARM   alarm;
-RV8523        rtc;
+PCF8523 rtc;
 
 SPIEEP eep(16, 128, 65535);
 
@@ -44,45 +47,22 @@ void setup() {
   clock_prescale_set(CLOCKPRESC); // reduce clock to save energy
 
   Serial.begin(115200);
+  Wire.begin();
+  rtc.begin();
+  rtc.setTime(DateTime(F(__DATE__), F(__TIME__)) - TimeSpan(UTCOFFSET * 60 * 60));
 
-  alarm.resetCtrl();
+  rtc.setBatterySwitchover();
+  rtc.setTwelveTwentyFourHour(eTWENTYFOURHOUR);
+  rtc.setAlarm(SENDMINUTE);
+  rtc.enableAlarm(true);
+  rtc.ackAlarm();
 
-  rtc.set24HourMode();
-  rtc.start();
-  rtc.batterySwitchOver(1);
+
   init_radio();
   radio.sleep();
 
   eep.begin_spi(EEPROM_CSPIN);
   eep.sleepmode();
-
-  alarm.setAlarmTime(0, 0, 0, 0);
-  alarm.setAlarmType(INI_ALARMTYPE);
-  switch (INI_ALARMTYPE)
-  {
-    case 'm':
-      alarm.clearAlarmType('h');
-      alarm.clearAlarmType('d');
-      alarm.clearAlarmType('w');
-      break;
-    case 'h':
-      alarm.clearAlarmType('m');
-      alarm.clearAlarmType('d');
-      alarm.clearAlarmType('w');
-      break;
-    case 'd':
-      alarm.clearAlarmType('m');
-      alarm.clearAlarmType('h');
-      alarm.clearAlarmType('w');
-      break;
-    case 'w':
-      alarm.clearAlarmType('m');
-      alarm.clearAlarmType('h');
-      alarm.clearAlarmType('d');
-      break;
-    default:
-      break;
-  }
 
   pinMode(RTC_IRQ_PIN, INPUT);
 
@@ -105,14 +85,12 @@ void loop() {
     sendData(&nodeData);
     printData_v1(&nodeData);
 
-    alarm.resetInterrupt();
+    //    alarm.resetInterrupt();
     alarmTriggered = false;
 
   }
 
-  //activate the alarm
-  alarm.activateAlarm();
-  alarm.resetInterrupt();
+  rtc.ackAlarm();
 
   //create an interupt for the rtc alarm
   attachInterrupt(digitalPinToInterrupt(RTC_IRQ_PIN), irqHandler, FALLING);
@@ -126,6 +104,9 @@ void loop() {
 
 
 
+/**
+   Init the data structure with some basic information
+*/
 void initData(NodeData_v1 *nd) {
   nd->version = 1;
   nd->sent = false;
@@ -133,18 +114,34 @@ void initData(NodeData_v1 *nd) {
   nd->sender_id = NODEID;
 }
 
+/**
+   Get the current time and store it to the data structure
+*/
 void getTime(NodeData_v1 *nd) {
-  rtc.get(&(nd->sec), &(nd->minute), &(nd->hour), &(nd->day), &(nd->month), &(nd->year));
+  DateTime now = rtc.readTime();
+  nd->sec = now.second();
+  nd->minute = now.minute();
+  nd->hour = now.hour();
+  nd->day = now.day();
+  nd->month = now.month();
+  nd->year = now.year();
+  //rtc.get(&(nd->sec), &(nd->minute), &(nd->hour), &(nd->day), &(nd->month), &(nd->year));
 }
 
 
+/**
+   Send the data structure to the gateway
+*/
 boolean sendData(NodeData_v1 *nd) {
   init_radio();
   Serial.print("Size of packet "); Serial.println(sizeof(*nd));
-  nd->sent = radio.sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), 3, RFM69_ACK_TIMEOUT * 10);
+  nd->sent = radio.sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, RFM69_ACK_TIMEOUT * 5);
   radio.sleep();
 }
 
+/**
+   Read out sensor data and store it to the data structure
+*/
 void getSensorData(NodeData_v1 *nd) {
   mySDI12.begin();
   pinMode(SENSOR_PWPIN, OUTPUT);
@@ -191,6 +188,9 @@ void getSensorData(NodeData_v1 *nd) {
   digitalWrite(SENSOR_PWPIN, LOW);
 }
 
+/**
+   Initialize the radio and prepare for sending
+*/
 void init_radio()
 {
   //initialize the radio with the desired frequency, nodeID and networkID
@@ -205,7 +205,9 @@ void init_radio()
 }
 
 
-// Find the Nth position of a character in a string
+/**
+   Utility function: Find the Nth position of a given character
+*/
 int getNIndexOf(String s, char stopchar, int index) {
   int checkpos = -1;
   for (int i = 0; i <= index; i++) {
@@ -217,6 +219,9 @@ int getNIndexOf(String s, char stopchar, int index) {
   return checkpos;
 }
 
+/**
+   The IRQ handler for the wakeup interrupt by the RTC.
+*/
 void irqHandler()
 {
   alarmTriggered = true;
