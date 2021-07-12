@@ -38,12 +38,6 @@ void setup() {
   radio.initialize(FREQUENCY, NODEID, NETWORKID);
   radio.encrypt(ENCRYPTKEY);
   radio.spyMode(promiscuousMode);
-  Serial.print("Sizeof float:"); Serial.println(sizeof(float));
-  Serial.print("Sizeof int:"); Serial.println(sizeof(int));
-  Serial.print("Sizeof bool:"); Serial.println(sizeof(bool));
-  uint32_t x = 0x12345678;
-  const uint8_t* p = reinterpret_cast<const uint8_t*>(&x);
-  Serial.printf("%02X%02X%02X%02X\n", p[0], p[1], p[2], p[3]);
 }
 
 
