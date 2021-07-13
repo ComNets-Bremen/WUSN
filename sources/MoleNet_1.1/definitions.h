@@ -29,7 +29,9 @@ Definitions for MoleNet program
 #define FREQUENCY       RF69_433MHZ     //Frequency to be used for communication
 #define ENCRYPTKEY      "myCodeIsVeryGood"  //key for encryption exactly the same 16 characters / bytes on all nodes!
 
-#define IS_RFM69HW_HCW  //uncomment only for RFM69HW/HCW! Leave out if you have RFM69W/CW!
+#define RADIO_POWERLEVEL  31
+
+// #define IS_RFM69HW_HCW  //uncomment only for RFM69HW/HCW! Leave out if you have RFM69W/CW!
 
 
 // Version 1 of the data structure
