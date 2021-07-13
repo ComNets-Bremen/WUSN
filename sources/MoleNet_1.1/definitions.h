@@ -29,6 +29,8 @@ Definitions for MoleNet program
 #define FREQUENCY       RF69_433MHZ     //Frequency to be used for communication
 #define ENCRYPTKEY      "myCodeIsVeryGood"  //key for encryption exactly the same 16 characters / bytes on all nodes!
 
+#define IS_RFM69HW_HCW  //uncomment only for RFM69HW/HCW! Leave out if you have RFM69W/CW!
+
 
 // Version 1 of the data structure
 typedef struct {
@@ -55,6 +57,7 @@ void printData_v1(NodeData_v1 *nd) {
   Serial.print("Day: "); Serial.println(nd->day);
   Serial.print("Hour: "); Serial.println(nd->hour);
   Serial.print("Minute: "); Serial.println(nd->minute);
+  Serial.print("Second: "); Serial.println(nd->sec);
   Serial.print("RSSI: "); Serial.println(nd->rssi);
   Serial.print("VWC: "); Serial.println(nd->vwc);
   Serial.print("Temp: "); Serial.println(nd->temp);
