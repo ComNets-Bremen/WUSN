@@ -24,6 +24,7 @@
 //Simple Gateway for MoleNet
 
 #include <RFM69.h>  //get it here: https://www.github.com/lowpowerlab/rfm69
+#include "base64.hpp"
 #include "definitions.h"
 #define NODEID        1    //unique for each node on same network
 
@@ -36,6 +37,9 @@ void setup() {
   Serial.begin(SERIAL_BAUD);
   delay(10);
   radio.initialize(FREQUENCY, NODEID, NETWORKID);
+#ifdef IS_RFM69HW_HCW
+  radio.setHighPower(); //must include this only for RFM69HW/HCW!
+#endif
   radio.encrypt(ENCRYPTKEY);
   radio.spyMode(promiscuousMode);
 }
@@ -52,6 +56,11 @@ void loop() {
       nodeData.rssi = radio.RSSI;
       nodeData.sent = true; // we received, so it was sent.
       printData_v1(&nodeData);
+      char encoded[BASE64::encodeLength(sizeof(NodeData_v1))];
+      BASE64::encode((const uint8_t*)&nodeData, sizeof(NodeData_v1), encoded);
+      Serial.println("BASE64 encoded data (Version 1):");
+      Serial.println(encoded);
+
 
     } else {
       Serial.print("Wrong len: "); Serial.print(sizeof(NodeData_v1)); Serial.print("   "); Serial.print(radio.DATALEN);
