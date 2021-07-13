@@ -72,6 +72,8 @@ void setup() {
   rtc.enableAlarm(true);
   rtc.ackAlarm();
 
+  Serial.print("RTC power low: "); Serial.println(rtc.rtcBatteryLow());
+
 
   init_radio();
   radio.sleep();
@@ -216,6 +218,7 @@ void init_radio()
 #ifdef IS_RFM69HW_HCW
   radio.setHighPower(); //must include this only for RFM69HW/HCW!
 #endif
+  radio.setPowerLevel(RADIO_POWERLEVEL);
   //enable encryption for the communication
   radio.encrypt(ENCRYPTKEY);
   //radio.setFrequency(434000000); //set frequency to some custom frequency
