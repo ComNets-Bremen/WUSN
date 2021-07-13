@@ -16,15 +16,20 @@
 #define SENSOR_PWPIN    7         // Sensor Power
 #define SENSOR_PIN      8         // Sensor data pin
 #define RTC_IRQ_PIN     3         // The Pin ID
-#define NODEID          1
+#define RFM_IRQ_PIN     2         // The Pin ID
+
+#define NODEID          5         // The ID should not be 1 -> the gateway is our number one!
+
 #define EEPROM_CSPIN    9         // CS for EEPROM
 #define CLOCKPRESC      clock_div_1 // reduce energy consumption, baudrate and
-
-#define RADIOPOWERLEVEL  31        //31: send with full power
 
 #define SENDMINUTE      0         // Send every full hour
 
 #define UTCOFFSET       2         // Time offset while programming this sketch to set the RTC to UTC
+
+#if NODEID == 1
+#error The node id is one but I am quite sure that this is not a gateway
+#endif
 
 // TODO:
 // Use new flash lib?
@@ -47,9 +52,19 @@ void setup() {
   clock_prescale_set(CLOCKPRESC); // reduce clock to save energy
 
   Serial.begin(115200);
+  Serial.print("Sketch complied on: ");
+  Serial.print(F(__DATE__));
+  Serial.print(" ");
+  Serial.println(F(__TIME__));
+
   Wire.begin();
   rtc.begin();
-  rtc.setTime(DateTime(F(__DATE__), F(__TIME__)) - TimeSpan(UTCOFFSET * 60 * 60));
+  if (! rtc.isrunning()) {
+    Serial.println("RTC not running. Setting time to sketch compile time");
+    rtc.setTime(DateTime(F(__DATE__), F(__TIME__)) - TimeSpan(UTCOFFSET * 60 * 60));
+  } else {
+    Serial.println("The RTC is running. Doing nothing");
+  }
 
   rtc.setBatterySwitchover();
   rtc.setTwelveTwentyFourHour(eTWENTYFOURHOUR);
@@ -74,7 +89,6 @@ void setup() {
 
 void loop() {
   detachInterrupt(digitalPinToInterrupt(RTC_IRQ_PIN));
-
 
   if (alarmTriggered) {
     Serial.println("Sending data");
@@ -125,7 +139,6 @@ void getTime(NodeData_v1 *nd) {
   nd->day = now.day();
   nd->month = now.month();
   nd->year = now.year();
-  //rtc.get(&(nd->sec), &(nd->minute), &(nd->hour), &(nd->day), &(nd->month), &(nd->year));
 }
 
 
@@ -135,8 +148,13 @@ void getTime(NodeData_v1 *nd) {
 boolean sendData(NodeData_v1 *nd) {
   init_radio();
   Serial.print("Size of packet "); Serial.println(sizeof(*nd));
-  nd->sent = radio.sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, RFM69_ACK_TIMEOUT * 5);
+  //nd->sent = radio.sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, RFM69_ACK_TIMEOUT * 2);
+  nd->sent = sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, 3000); // MoleNet function, not the timeout issue
+  nd->rssi = radio.RSSI;
   radio.sleep();
+  // Ensure uc is not woken up by radio in deep sleep
+  // Will be enabled by init_radio again
+  detachInterrupt(digitalPinToInterrupt(RFM_IRQ_PIN));
 }
 
 /**
@@ -195,13 +213,34 @@ void init_radio()
 {
   //initialize the radio with the desired frequency, nodeID and networkID
   radio.initialize(FREQUENCY, NODEID, NETWORKID);
-  //set the transmission power to the maximum
-  radio.setPowerLevel(RADIOPOWERLEVEL);
+#ifdef IS_RFM69HW_HCW
+  radio.setHighPower(); //must include this only for RFM69HW/HCW!
+#endif
   //enable encryption for the communication
   radio.encrypt(ENCRYPTKEY);
   //radio.setFrequency(434000000); //set frequency to some custom frequency
   //didn't work in test
   delay(1);
+}
+
+/**
+   MoleNet version of the sendWithRetry function. Can handle ACK timeout with more than 256 ms
+*/
+bool sendWithRetry(uint16_t toAddress, const void *buffer, uint8_t bufferSize, uint8_t retries, unsigned long timeout) {
+  unsigned long sentTime;
+  for (uint8_t i = 0; i <= retries; i++)
+  {
+    radio.send(toAddress, buffer, bufferSize, true);
+    sentTime = millis();
+    while (millis() - sentTime < timeout)
+    {
+      if (radio.ACKReceived(toAddress)) {
+        Serial.print("Ack rx after ms: "); Serial.println(millis() - sentTime);
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 
