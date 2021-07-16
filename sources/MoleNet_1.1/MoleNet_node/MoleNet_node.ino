@@ -21,7 +21,7 @@
 #define NODEID          5         // The ID should not be 1 -> the gateway is our number one!
 
 #define EEPROM_CSPIN    9         // CS for EEPROM
-#define CLOCKPRESC      clock_div_1 // reduce energy consumption, baudrate and
+#define CLOCKPRESC      clock_div_1 // reduce energy consumption, baudrate
 
 #define SENDMINUTE      0         // Send every full hour
 
@@ -49,13 +49,15 @@ volatile boolean alarmTriggered = false;
 RFM69 radio;
 
 void setup() {
-  clock_prescale_set(CLOCKPRESC); // reduce clock to save energy
+  //clock_prescale_set(CLOCKPRESC); // reduce clock to save energy. Results into problems with
 
   Serial.begin(115200);
   Serial.print("Sketch complied on: ");
   Serial.print(F(__DATE__));
   Serial.print(" ");
   Serial.println(F(__TIME__));
+
+  pinMode(RTC_IRQ_PIN, INPUT_PULLUP);
 
   Wire.begin();
   rtc.begin();
@@ -70,7 +72,6 @@ void setup() {
   rtc.setTwelveTwentyFourHour(eTWENTYFOURHOUR);
   rtc.setAlarm(SENDMINUTE);
   rtc.enableAlarm(true);
-  rtc.ackAlarm();
 
   Serial.print("RTC power low: "); Serial.println(rtc.rtcBatteryLow());
 
@@ -83,8 +84,8 @@ void setup() {
 
   pinMode(RTC_IRQ_PIN, INPUT);
 
-  // Force one time sending after startup:
-  alarmTriggered = true;
+  // Force reading the RTC state
+  irqHandler();
 
   Serial.println("### Setup done");
 }
@@ -150,13 +151,14 @@ void getTime(NodeData_v1 *nd) {
 boolean sendData(NodeData_v1 *nd) {
   init_radio();
   Serial.print("Size of packet "); Serial.println(sizeof(*nd));
-  //nd->sent = radio.sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, RFM69_ACK_TIMEOUT * 2);
-  nd->sent = sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, 3000); // MoleNet function, not the timeout issue
+  //nd->sent = radio.sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, RFM69_ACK_TIMEOUT * 6);
+  nd->sent = moleSendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, 500); // MoleNet function, not the timeout issue
   nd->rssi = radio.RSSI;
+  // Maybe add delay before going to slee? Was done so in previous version.
   radio.sleep();
   // Ensure uc is not woken up by radio in deep sleep
   // Will be enabled by init_radio again
-  detachInterrupt(digitalPinToInterrupt(RFM_IRQ_PIN));
+
 }
 
 /**
@@ -197,7 +199,7 @@ void getSensorData(NodeData_v1 *nd) {
   String datastring = mySDI12.readStringUntil('\n'); // Data string
   while (mySDI12.available())mySDI12.read();
 
-  //Serial.println(datastring);
+  Serial.print("Datastring from Sensor: "); Serial.println(datastring);
 
   // TODO: Change for sensors without conductivity, check with number of sensors variable
   nd->vwc = datastring.substring(getNIndexOf(datastring, '+', 0) + 1, getNIndexOf(datastring, '+', 1)).toFloat();
@@ -223,22 +225,29 @@ void init_radio()
   radio.encrypt(ENCRYPTKEY);
   //radio.setFrequency(434000000); //set frequency to some custom frequency
   //didn't work in test
-  delay(1);
+  delay(1); // TODO: Check
 }
 
 /**
-   MoleNet version of the sendWithRetry function. Can handle ACK timeout with more than 256 ms
+   MoleNet version of the sendWithRetry function. Can handle ACK timeout with more than 256 ms and timestamps sent via the ACK
 */
-bool sendWithRetry(uint16_t toAddress, const void *buffer, uint8_t bufferSize, uint8_t retries, unsigned long timeout) {
+bool moleSendWithRetry(uint16_t toAddress, const void *buffer, uint8_t bufferSize, uint8_t retries, unsigned long timeout) {
   unsigned long sentTime;
   for (uint8_t i = 0; i <= retries; i++)
   {
     radio.send(toAddress, buffer, bufferSize, true);
     sentTime = millis();
     while (millis() - sentTime < timeout)
-    {
+    {      
       if (radio.ACKReceived(toAddress)) {
         Serial.print("Ack rx after ms: "); Serial.println(millis() - sentTime);
+        // We got a timestamp from the remote side. Use it to sync our RTC
+        if (radio.DATALEN == sizeof(unsigned long)) {
+          unsigned long current_time;
+          memcpy(&current_time, radio.DATA, radio.DATALEN);
+          Serial.print("Timestamp received: "); Serial.println(current_time);
+          rtc.setTime(DateTime(current_time));
+        }
         return true;
       }
     }
@@ -266,5 +275,6 @@ int getNIndexOf(String s, char stopchar, int index) {
 */
 void irqHandler()
 {
-  alarmTriggered = true;
+  if (digitalRead(RTC_IRQ_PIN) == LOW)
+    alarmTriggered = true;
 }
