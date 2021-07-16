@@ -1,27 +1,27 @@
-  /******************************************************************************
- * MoleNet - A Wireless Underground Sensor Network
- *
- * Copyright (C) 2016, Communication Networks, University of Bremen, Germany
- *
- * This program is free software; you can redistribute it and/or modify it
- * under the terms of the GNU General Public License as published by the
- * Free Software Foundation; version 3 of the License.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE.
- * See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License along
- * with this program; if not, see <http://www.gnu.org/licenses/>
- *
- * This file is part of MoleNet
- *
- ******************************************************************************/
+/******************************************************************************
+  MoleNet - A Wireless Underground Sensor Network
+
+  Copyright (C) 2016, Communication Networks, University of Bremen, Germany
+
+  This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by the
+  Free Software Foundation; version 3 of the License.
+
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.
+  See the GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, see <http://www.gnu.org/licenses/>
+
+  This file is part of MoleNet
+
+******************************************************************************/
 
 
 /*
-Definitions for MoleNet program
+  Definitions for MoleNet program
 */
 
 #define NETWORKID       100             //the same on all nodes in the network
@@ -31,7 +31,7 @@ Definitions for MoleNet program
 
 #define RADIO_POWERLEVEL  31
 
-// #define IS_RFM69HW_HCW  //uncomment only for RFM69HW/HCW! Leave out if you have RFM69W/CW!
+//#define IS_RFM69HW_HCW  //uncomment only for RFM69HW/HCW! Leave out if you have RFM69W/CW!
 
 
 // Version 1 of the data structure
@@ -54,12 +54,8 @@ typedef struct {
 void printData_v1(NodeData_v1 *nd) {
   Serial.print("Version: "); Serial.println(nd->version);
   Serial.print("Sender_id: "); Serial.println(nd->sender_id);
-  Serial.print("year: "); Serial.println(nd->year);
-  Serial.print("Month: "); Serial.println(nd->month);
-  Serial.print("Day: "); Serial.println(nd->day);
-  Serial.print("Hour: "); Serial.println(nd->hour);
-  Serial.print("Minute: "); Serial.println(nd->minute);
-  Serial.print("Second: "); Serial.println(nd->sec);
+  Serial.print("Datetime: "); Serial.print(nd->year); Serial.print("-"); Serial.print(nd->month); Serial.print("-"); Serial.print(nd->day); Serial.print(" ");
+  Serial.print(nd->hour); Serial.print(":"); Serial.print(nd->minute); Serial.print(":"); Serial.println(nd->sec);
   Serial.print("RSSI: "); Serial.println(nd->rssi);
   Serial.print("VWC: "); Serial.println(nd->vwc);
   Serial.print("Temp: "); Serial.println(nd->temp);
