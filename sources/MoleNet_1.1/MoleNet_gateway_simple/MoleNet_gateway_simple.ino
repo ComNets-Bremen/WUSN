@@ -21,9 +21,30 @@
 
  ******************************************************************************/
 
+/*
+   This code is running using the RFM69 lib by LowPowerLab. There is an ESP8266
+   related issue in the lab:
+   https://github.com/LowPowerLab/RFM69/issues/105
+   https://github.com/LowPowerLab/RFM69/pull/150
+
+   Instead of deriving a subclass, just change the sendACK() method in the lib for
+   example to
+
+    while (!canSend() && millis() - now < RF69_CSMA_LIMIT_MS){
+      receiveDone();
+    #ifdef RF69_PLATFORM_ESP8266
+      delay(1); // Required to let the ESP8266 handle some background tasks
+    #endif
+    }
+
+    Created PR 168, hope that helps: https://github.com/LowPowerLab/RFM69/pull/168
+
+*/
+
+
 //Simple Gateway for MoleNet
 
-#include <RFM69.h>  //get it here: https://www.github.com/lowpowerlab/rfm69
+#include <RFM69.h>
 #include "base64.hpp"
 #include "definitions.h"
 #define NODEID        1    //unique for each node on same network
@@ -68,9 +89,9 @@ void loop() {
 
     if (radio.ACKRequested())
     {
-      byte theNodeID = radio.SENDERID;
       radio.sendACK();
       Serial.println(" - ACK sent.");
     }
+// TODO: If we have an RTC on the gateway: Reply with epoch time to sync the time for all nodes
   }
 }
