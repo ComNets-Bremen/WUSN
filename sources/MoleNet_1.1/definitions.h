@@ -45,6 +45,7 @@ typedef struct {
   uint8_t minute;
   uint8_t sec;
   int32_t rssi;
+  uint8_t sequence;
   float vwc;
   float temp;
   float cond;
@@ -57,6 +58,7 @@ void printData_v1(NodeData_v1 *nd) {
   Serial.print("Datetime: "); Serial.print(nd->year); Serial.print("-"); Serial.print(nd->month); Serial.print("-"); Serial.print(nd->day); Serial.print(" ");
   Serial.print(nd->hour); Serial.print(":"); Serial.print(nd->minute); Serial.print(":"); Serial.println(nd->sec);
   Serial.print("RSSI: "); Serial.println(nd->rssi);
+  Serial.print("Seq: "); Serial.println(nd->sequence);
   Serial.print("VWC: "); Serial.println(nd->vwc);
   Serial.print("Temp: "); Serial.println(nd->temp);
   Serial.print("Cond: "); Serial.println(nd->cond);
