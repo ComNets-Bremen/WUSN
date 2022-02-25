@@ -46,6 +46,8 @@ NodeData_v1 nodeData;
 
 volatile boolean alarmTriggered = false;
 
+uint8_t seq = 0; // A sequence number for the packets
+
 RFM69 radio;
 
 void setup() {
@@ -56,6 +58,7 @@ void setup() {
   Serial.print(F(__DATE__));
   Serial.print(" ");
   Serial.println(F(__TIME__));
+  randomSeed(analogRead(0));
 
   pinMode(RTC_IRQ_PIN, INPUT_PULLUP);
 
@@ -86,6 +89,8 @@ void setup() {
 
   // Force reading the RTC state
   irqHandler();
+
+  seq = random(0, 250); // Init sequence number with random value.
 
   Serial.println("### Setup done");
 }
@@ -125,10 +130,12 @@ void loop() {
    Init the data structure with some basic information
 */
 void initData(NodeData_v1 *nd) {
+  seq++;
   nd->version = 1;
   nd->sent = false;
   nd->rssi = 0;
   nd->sender_id = NODEID;
+  nd->sequence = seq;
 }
 
 /**
@@ -152,7 +159,7 @@ boolean sendData(NodeData_v1 *nd) {
   init_radio();
   Serial.print("Size of packet "); Serial.println(sizeof(*nd));
   //nd->sent = radio.sendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, RFM69_ACK_TIMEOUT * 6);
-  nd->sent = moleSendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, 500); // MoleNet function, not the timeout issue
+  nd->sent = moleSendWithRetry(GATEWAYID, (byte*)nd, sizeof(*nd), (uint8_t)3, RFM69_ACK_TIMEOUT * 6); // MoleNet function, handle data from ACK packet -> timestamp
   nd->rssi = radio.RSSI;
   // Maybe add delay before going to slee? Was done so in previous version.
   radio.sleep();
@@ -229,7 +236,7 @@ void init_radio()
 }
 
 /**
-   MoleNet version of the sendWithRetry function. Can handle ACK timeout with more than 256 ms and timestamps sent via the ACK
+   MoleNet version of the sendWithRetry function. Can handle ACK timeout with more than 256 ms (should not be required after update of RFM69 lib) and timestamps sent via the ACK
 */
 bool moleSendWithRetry(uint16_t toAddress, const void *buffer, uint8_t bufferSize, uint8_t retries, unsigned long timeout) {
   unsigned long sentTime;
@@ -238,7 +245,7 @@ bool moleSendWithRetry(uint16_t toAddress, const void *buffer, uint8_t bufferSiz
     radio.send(toAddress, buffer, bufferSize, true);
     sentTime = millis();
     while (millis() - sentTime < timeout)
-    {      
+    {
       if (radio.ACKReceived(toAddress)) {
         Serial.print("Ack rx after ms: "); Serial.println(millis() - sentTime);
         // We got a timestamp from the remote side. Use it to sync our RTC
