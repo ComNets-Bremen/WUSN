@@ -12409,7 +12409,6 @@ by exp-lbrs.ulp</description>
 <part name="JP5" library="Connector" library_urn="urn:adsk.eagle:library:16378166" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:22407/2"/>
 <part name="JP1" library="Connector" library_urn="urn:adsk.eagle:library:16378166" deviceset="PINHD-2X3" device="" package3d_urn="urn:adsk.eagle:package:22462/2"/>
 <part name="Q1" library="BeagleBone_Blue_R3" library_urn="urn:adsk.eagle:library:5828899" deviceset="MOSFET-NCHANNEL" device="BSS138" package3d_urn="urn:adsk.eagle:package:5829571/1"/>
-<part name="U$1" library="SOT95P237X111-3N" deviceset="BZX84C7V5LT1G" device=""/>
 <part name="U2" library="SN74LVC1G240DBVR" deviceset="SN74LVC1G240DBVR" device=""/>
 <part name="U$2" library="Airquality_Sensor" library_urn="urn:adsk.eagle:library:16015176" deviceset="GND" device=""/>
 <part name="C12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="025-024X044" package3d_urn="urn:adsk.eagle:package:23630/1" value="100n"/>
@@ -12426,7 +12425,7 @@ by exp-lbrs.ulp</description>
 <plain>
 <text x="182.88" y="7.62" size="1.778" layer="94">Last Updated: 21.02.2022</text>
 <wire x1="96.64" y1="0" x2="97.32" y2="0" width="0.1524" layer="94"/>
-<text x="137.16" y="55.88" size="1.4224" layer="94">RFM ON/OFF</text>
+<text x="116.84" y="96.52" size="1.4224" layer="94">RFM ON/OFF</text>
 <text x="50.8" y="25.4" size="1.4224" layer="94">SWD</text>
 <text x="137.16" y="35.56" size="1.778" layer="94">SPI BUS</text>
 <wire x1="81.28" y1="177.8" x2="81.28" y2="142.24" width="0.1524" layer="94" style="longdash"/>
@@ -12575,9 +12574,9 @@ by exp-lbrs.ulp</description>
 <attribute name="NAME" x="49.53" y="23.495" size="1.778" layer="95"/>
 <attribute name="VALUE" x="49.53" y="7.62" size="1.778" layer="96"/>
 </instance>
-<instance part="JP1" gate="A" x="142.24" y="48.26" smashed="yes">
-<attribute name="NAME" x="135.89" y="53.975" size="1.778" layer="95"/>
-<attribute name="VALUE" x="135.89" y="40.64" size="1.778" layer="96"/>
+<instance part="JP1" gate="A" x="121.92" y="88.9" smashed="yes">
+<attribute name="NAME" x="115.57" y="94.615" size="1.778" layer="95"/>
+<attribute name="VALUE" x="115.57" y="81.28" size="1.778" layer="96"/>
 </instance>
 <instance part="Q1" gate="G$1" x="210.82" y="81.28" smashed="yes" rot="MR0">
 <attribute name="NAME" x="205.74" y="81.28" size="1.778" layer="95" rot="MR0"/>
@@ -12888,23 +12887,23 @@ by exp-lbrs.ulp</description>
 </net>
 <net name="SPI1_SCK" class="0">
 <segment>
-<label x="121.92" y="45.72" size="1.778" layer="95"/>
+<label x="101.6" y="86.36" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="5"/>
-<wire x1="139.7" y1="45.72" x2="134.62" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="86.36" x2="114.3" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI1_MISO" class="0">
 <segment>
-<label x="121.92" y="50.8" size="1.778" layer="95"/>
+<label x="101.6" y="91.44" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="1"/>
-<wire x1="139.7" y1="50.8" x2="134.62" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="91.44" x2="114.3" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI1_MOSI" class="0">
 <segment>
-<label x="121.92" y="48.26" size="1.778" layer="95"/>
+<label x="101.6" y="88.9" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="3"/>
-<wire x1="139.7" y1="48.26" x2="134.62" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="88.9" x2="114.3" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -12921,9 +12920,9 @@ by exp-lbrs.ulp</description>
 </net>
 <net name="SPI1_MISO_ON" class="0">
 <segment>
-<label x="152.4" y="50.8" size="1.778" layer="95"/>
+<label x="132.08" y="91.44" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="2"/>
-<wire x1="147.32" y1="50.8" x2="152.4" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="127" y1="91.44" x2="132.08" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$18" gate="G$1" pin="MISO"/>
@@ -12933,9 +12932,9 @@ by exp-lbrs.ulp</description>
 </net>
 <net name="SPI1_MOSI_ON" class="0">
 <segment>
-<label x="152.4" y="48.26" size="1.778" layer="95"/>
+<label x="132.08" y="88.9" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="4"/>
-<wire x1="147.32" y1="48.26" x2="152.4" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="127" y1="88.9" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$18" gate="G$1" pin="MOSI"/>
@@ -12945,9 +12944,9 @@ by exp-lbrs.ulp</description>
 </net>
 <net name="SPI1_SCK_ON" class="0">
 <segment>
-<label x="152.4" y="45.72" size="1.778" layer="95"/>
+<label x="132.08" y="86.36" size="1.778" layer="95"/>
 <pinref part="JP1" gate="A" pin="6"/>
-<wire x1="147.32" y1="45.72" x2="152.4" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="127" y1="86.36" x2="132.08" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$18" gate="G$1" pin="SCK"/>
