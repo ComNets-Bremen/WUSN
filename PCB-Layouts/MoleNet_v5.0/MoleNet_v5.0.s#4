@@ -13306,6 +13306,7 @@ KIND PROPERTIES
 <wire x1="179.07" y1="63.5" x2="179.07" y2="134.62" width="0.1524" layer="94" style="longdash"/>
 <wire x1="273.05" y1="63.5" x2="179.07" y2="63.5" width="0.1524" layer="94" style="longdash"/>
 <wire x1="85.09" y1="29.21" x2="179.07" y2="29.21" width="0.1524" layer="94" style="longdash"/>
+<text x="107.95" y="73.66" size="1.778" layer="94">SD Card Interface</text>
 </plain>
 <instances>
 <instance part="MOLENET_V5.0" gate="G$1" x="0" y="0" smashed="yes">
@@ -13573,7 +13574,7 @@ KIND PROPERTIES
 <attribute name="VALUE" x="143.51" y="6.35" size="1.778" layer="96"/>
 </instance>
 <instance part="J3" gate="G$1" x="116.84" y="57.15" smashed="yes">
-<attribute name="NAME" x="114.3" y="70.485" size="1.778" layer="95" align="bottom-center"/>
+<attribute name="NAME" x="121.92" y="69.215" size="1.778" layer="95" align="bottom-center"/>
 <attribute name="VALUE" x="110.49" y="43.18" size="1.778" layer="96"/>
 </instance>
 <instance part="U$26" gate="G$1" x="100.33" y="44.45" smashed="yes">
@@ -14293,12 +14294,22 @@ KIND PROPERTIES
 <wire x1="104.14" y1="57.15" x2="102.87" y2="57.15" width="0.1524" layer="91"/>
 <label x="92.71" y="57.15" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB10"/>
+<wire x1="17.78" y1="30.48" x2="16.51" y2="30.48" width="0.1524" layer="91"/>
+<label x="6.35" y="30.48" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SD_MISO" class="0">
 <segment>
 <pinref part="J3" gate="G$1" pin="DAT0"/>
 <wire x1="104.14" y1="52.07" x2="102.87" y2="52.07" width="0.1524" layer="91"/>
 <label x="91.44" y="52.07" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PC2"/>
+<wire x1="68.58" y1="93.98" x2="69.85" y2="93.98" width="0.1524" layer="91"/>
+<label x="69.85" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SD_CS" class="0">
@@ -14313,6 +14324,11 @@ KIND PROPERTIES
 <pinref part="J3" gate="G$1" pin="CMD"/>
 <wire x1="104.14" y1="62.23" x2="102.87" y2="62.23" width="0.1524" layer="91"/>
 <label x="91.44" y="62.23" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PC3"/>
+<wire x1="68.58" y1="91.44" x2="69.85" y2="91.44" width="0.1524" layer="91"/>
+<label x="69.85" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

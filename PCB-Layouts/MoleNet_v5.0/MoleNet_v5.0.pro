@@ -1,33 +1,25 @@
-update=22/05/2015 07:44:53
-version=1
-last_client=kicad
-[general]
-version=1
-RootSch=
-BoardNm=
-[pcbnew]
-version=1
-LastNetListRead=
-UseCmpFile=1
-PadDrill=0.600000000000
-PadDrillOvalY=0.600000000000
-PadSizeH=1.500000000000
-PadSizeV=1.500000000000
-PcbTextSizeV=1.500000000000
-PcbTextSizeH=1.500000000000
-PcbTextThickness=0.300000000000
-ModuleTextSizeV=1.000000000000
-ModuleTextSizeH=1.000000000000
-ModuleTextSizeThickness=0.150000000000
-SolderMaskClearance=0.000000000000
-SolderMaskMinWidth=0.000000000000
-DrawSegmentWidth=0.200000000000
-BoardOutlineThickness=0.100000000000
-ModuleOutlineThickness=0.150000000000
-[cvpcb]
-version=1
-NetIExt=net
-[eeschema]
-version=1
-LibDir=
-[eeschema/libraries]
+EAGLE AutoRouter Statistics:
+
+Job           : F:/Embedded/MoleNet/gitHub/WUSN/PCB-Layouts/MoleNet_v5.0/MoleNet_v5.0.brd
+
+Start at      : 21:55:02 (27-03-2022)
+End at        : 16:17:59 (29-03-2022)
+Elapsed time  : 00:01:36
+
+Signals       :    73   RoutingGrid: 6 mil  Layers: 2
+Connections   :   195   predefined:  0 ( 0 Vias )
+
+Router memory :   1522716
+
+Passname          : TopRouter     Route Optimize1 Optimize2 Optimize3 Optimize4
+
+Time per pass     :  00:00:15  00:00:38  00:00:14  00:00:11  00:00:09  00:00:09
+Number of Ripups  :         0         5         0         0         0         0
+max. Level        :         0         1         0         0         0         0
+max. Total        :         0        82         0         0         0         0
+
+Routed            :        42       193       193       193       193       193
+Vias              :         0       133       174       140       121       114
+Resolution        :    21.5 %    99.0 %    99.0 %    99.0 %    99.0 %    99.0 %
+
+Final             : 99.0% finished
