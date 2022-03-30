@@ -14294,12 +14294,22 @@ KIND PROPERTIES
 <wire x1="104.14" y1="57.15" x2="102.87" y2="57.15" width="0.1524" layer="91"/>
 <label x="92.71" y="57.15" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB10"/>
+<wire x1="17.78" y1="30.48" x2="16.51" y2="30.48" width="0.1524" layer="91"/>
+<label x="6.35" y="30.48" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SD_MISO" class="0">
 <segment>
 <pinref part="J3" gate="G$1" pin="DAT0"/>
 <wire x1="104.14" y1="52.07" x2="102.87" y2="52.07" width="0.1524" layer="91"/>
 <label x="91.44" y="52.07" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PC2"/>
+<wire x1="68.58" y1="93.98" x2="69.85" y2="93.98" width="0.1524" layer="91"/>
+<label x="69.85" y="93.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SD_CS" class="0">
@@ -14314,6 +14324,11 @@ KIND PROPERTIES
 <pinref part="J3" gate="G$1" pin="CMD"/>
 <wire x1="104.14" y1="62.23" x2="102.87" y2="62.23" width="0.1524" layer="91"/>
 <label x="91.44" y="62.23" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PC3"/>
+<wire x1="68.58" y1="91.44" x2="69.85" y2="91.44" width="0.1524" layer="91"/>
+<label x="69.85" y="91.44" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

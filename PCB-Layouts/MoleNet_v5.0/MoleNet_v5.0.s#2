@@ -14967,7 +14967,7 @@ CONN_05
 <sheets>
 <sheet>
 <plain>
-<text x="182.88" y="7.62" size="1.778" layer="94">Last Updated: 21.02.2022</text>
+<text x="182.88" y="7.62" size="1.778" layer="94">Last Updated: 23.03.2022</text>
 <wire x1="96.64" y1="0" x2="97.32" y2="0" width="0.1524" layer="94"/>
 <text x="143.51" y="25.4" size="1.4224" layer="94">RFM ON/OFF</text>
 <text x="205.74" y="129.54" size="1.778" layer="94">SDI-12 Interface</text>

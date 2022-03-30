@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -16518,6 +16518,9 @@ Source: http://www.osram.convergy.de/</description>
 <part name="R8" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="220"/>
 <part name="U$33" library="Airquality_Sensor" library_urn="urn:adsk.eagle:library:16015176" deviceset="GND" device=""/>
 <part name="SUPPLY19" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="LED3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIPLED_0805" package3d_urn="urn:adsk.eagle:package:6240559/1"/>
+<part name="R9" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="220"/>
+<part name="U$1" library="Airquality_Sensor" library_urn="urn:adsk.eagle:library:16015176" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16915,6 +16918,17 @@ Source: http://www.osram.convergy.de/</description>
 <instance part="SUPPLY19" gate="G$1" x="90.17" y="91.44" smashed="yes">
 <attribute name="VALUE" x="90.17" y="94.234" size="1.778" layer="96" align="bottom-center"/>
 </instance>
+<instance part="LED3" gate="G$1" x="88.9" y="53.34" smashed="yes">
+<attribute name="NAME" x="92.456" y="48.768" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="94.615" y="48.768" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R9" gate="G$1" x="88.9" y="41.91" smashed="yes" rot="R90">
+<attribute name="NAME" x="87.4014" y="40.64" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="92.202" y="40.64" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="U$1" gate="G$1" x="88.9" y="33.02" smashed="yes">
+<attribute name="VALUE" x="91.186" y="33.02" size="1.27" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -17276,6 +17290,11 @@ Source: http://www.osram.convergy.de/</description>
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="U$33" gate="G$1" pin="GND"/>
 <wire x1="99.06" y1="36.83" x2="99.06" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="88.9" y1="36.83" x2="88.9" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SWDIO" class="0">
@@ -18271,6 +18290,13 @@ Source: http://www.osram.convergy.de/</description>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <wire x1="99.06" y1="55.88" x2="99.06" y2="58.42" width="0.1524" layer="91"/>
 <label x="91.44" y="57.15" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="LED3" gate="G$1" pin="C"/>
+<pinref part="R9" gate="G$1" pin="2"/>
+<wire x1="88.9" y1="48.26" x2="88.9" y2="46.99" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -3960,7 +3960,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$18" library="RFM95W-96W-98W" package="RFM95W/96W/98W" value="RFM95W/96W/98W" x="68.58" y="7.62" smashed="yes"/>
+<element name="U$18" library="RFM95W-96W-98W" package="RFM95W/96W/98W" value="RFM95W/96W/98W" x="66.04" y="7.62" smashed="yes"/>
 <element name="U1" library="STM32L073RZT6" package="QFP50P1200X1200X160-64N" value="STM32L073RZT6" x="52.07" y="39.37" smashed="yes">
 <attribute name="AVAILABILITY" value="In Stock" x="52.07" y="39.37" size="1.778" layer="27" display="off"/>
 <attribute name="DESCRIPTION" value=" ARM® Cortex®-M0+ STM32L0 Microcontroller IC 32-Bit 32MHz 192KB (192K x 8) FLASH 64-LQFP (10x10) " x="52.07" y="39.37" size="1.778" layer="27" display="off"/>
@@ -4155,14 +4155,14 @@ design rules under a new name.</description>
 <attribute name="TYPE" value="" x="38.1" y="76.2" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="33.02" y="71.755" size="1.27" layer="27"/>
 </element>
-<element name="X3" library="con-coax" library_urn="urn:adsk.eagle:library:133" package="R141426" package3d_urn="urn:adsk.eagle:package:6203/1" value="R141426" x="93.98" y="7.62" smashed="yes" rot="R180">
-<attribute name="MF" value="FARNELL" x="93.98" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="R141426161" x="93.98" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="96.52" y="1.27" size="1.27" layer="25" rot="R180"/>
-<attribute name="OC_FARNELL" value="4195115" x="93.98" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="14J7919" x="93.98" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="POPULARITY" value="0" x="93.98" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="96.52" y="15.24" size="1.27" layer="27" rot="R180"/>
+<element name="X3" library="con-coax" library_urn="urn:adsk.eagle:library:133" package="R141426" package3d_urn="urn:adsk.eagle:package:6203/1" value="R141426" x="92.71" y="7.62" smashed="yes" rot="R180">
+<attribute name="MF" value="FARNELL" x="92.71" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="R141426161" x="92.71" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="NAME" x="95.25" y="1.27" size="1.27" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="4195115" x="92.71" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="14J7919" x="92.71" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="POPULARITY" value="0" x="92.71" y="7.62" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="VALUE" x="95.25" y="15.24" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C18" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="4.7uF" x="91.44" y="16.51" smashed="yes" rot="R180">
 <attribute name="NAME" x="92.71" y="15.24" size="1.27" layer="25" rot="R180"/>
@@ -4456,11 +4456,11 @@ design rules under a new name.</description>
 <wire x1="35.56" y1="74.93" x2="43.18" y2="47.94" width="0" layer="19" extent="1-1"/>
 <wire x1="38.1" y1="74.93" x2="35.56" y2="74.93" width="0" layer="19" extent="1-1"/>
 <wire x1="43.18" y1="74.93" x2="38.1" y2="74.93" width="0" layer="19" extent="1-1"/>
-<wire x1="88.9" y1="2.54" x2="35.56" y2="74.93" width="0" layer="19" extent="1-1"/>
-<wire x1="88.9" y1="12.7" x2="88.9" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="99.06" y1="12.7" x2="88.9" y2="12.7" width="0" layer="19" extent="1-1"/>
-<wire x1="99.06" y1="2.54" x2="88.9" y2="2.54" width="0" layer="19" extent="1-1"/>
-<wire x1="8.85" y1="72.39" x2="99.06" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="87.63" y1="2.54" x2="35.56" y2="74.93" width="0" layer="19" extent="1-1"/>
+<wire x1="87.63" y1="12.7" x2="87.63" y2="2.54" width="0" layer="19" extent="1-1"/>
+<wire x1="97.79" y1="12.7" x2="87.63" y2="12.7" width="0" layer="19" extent="1-1"/>
+<wire x1="97.79" y1="2.54" x2="87.63" y2="2.54" width="0" layer="19" extent="1-1"/>
+<wire x1="8.85" y1="72.39" x2="97.79" y2="12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="90.49" y1="16.51" x2="8.85" y2="72.39" width="0" layer="19" extent="1-1"/>
 <wire x1="20.32" y1="6.35" x2="90.49" y2="16.51" width="0" layer="19" extent="1-1"/>
 <wire x1="27.94" y1="9.97" x2="20.32" y2="6.35" width="0" layer="19" extent="1-1"/>
@@ -4514,9 +4514,9 @@ design rules under a new name.</description>
 <wire x1="55.32" y1="33.7" x2="48.82" y2="33.7" width="0" layer="19" extent="1-1"/>
 <wire x1="48.82" y1="45.04" x2="46.4" y2="37.62" width="0" layer="19" extent="1-1"/>
 <wire x1="57.74" y1="42.62" x2="55.32" y2="33.7" width="0" layer="19" extent="1-1"/>
-<wire x1="68.58" y1="21.62" x2="57.74" y2="42.62" width="0" layer="19" extent="1-1"/>
-<wire x1="68.58" y1="7.62" x2="68.58" y2="21.62" width="0" layer="19" extent="1-1"/>
-<wire x1="84.58" y1="9.62" x2="68.58" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="21.62" x2="57.74" y2="42.62" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="7.62" x2="66.04" y2="21.62" width="0" layer="19" extent="1-1"/>
+<wire x1="82.04" y1="9.62" x2="66.04" y2="7.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN">
 <contactref element="U3" pad="1"/>
@@ -4534,17 +4534,17 @@ design rules under a new name.</description>
 <signal name="RFM_MISO/ON">
 <contactref element="U$18" pad="2"/>
 <contactref element="JP5" pad="2"/>
-<wire x1="68.58" y1="19.62" x2="60.96" y2="19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="19.62" x2="60.96" y2="19.05" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFM_MOSI/ON">
 <contactref element="U$18" pad="3"/>
 <contactref element="JP5" pad="4"/>
-<wire x1="68.58" y1="17.62" x2="60.96" y2="16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="17.62" x2="60.96" y2="16.51" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFM_SCK/ON">
 <contactref element="U$18" pad="4"/>
 <contactref element="JP5" pad="6"/>
-<wire x1="68.58" y1="15.62" x2="60.96" y2="13.97" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="15.62" x2="60.96" y2="13.97" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SWDIO">
 <contactref element="JP4" pad="2"/>
@@ -4588,7 +4588,7 @@ design rules under a new name.</description>
 <contactref element="C13" pad="1"/>
 <contactref element="JP4" pad="10"/>
 <contactref element="U$18" pad="6"/>
-<wire x1="68.58" y1="11.62" x2="46.4" y2="40.12" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="11.62" x2="46.4" y2="40.12" width="0" layer="19" extent="1-1"/>
 <wire x1="58.88" y1="78.075" x2="46.4" y2="40.12" width="0" layer="19" extent="1-1"/>
 <wire x1="52.88" y1="78.075" x2="58.88" y2="78.075" width="0" layer="19" extent="1-1"/>
 <wire x1="52.39" y1="68.58" x2="52.88" y2="78.075" width="0" layer="19" extent="1-1"/>
@@ -4625,7 +4625,7 @@ design rules under a new name.</description>
 <wire x1="55.82" y1="33.7" x2="49.32" y2="33.7" width="0" layer="19" extent="1-1"/>
 <wire x1="57.74" y1="43.12" x2="55.82" y2="33.7" width="0" layer="19" extent="1-1"/>
 <wire x1="48.32" y1="45.04" x2="57.74" y2="43.12" width="0" layer="19" extent="1-1"/>
-<wire x1="84.58" y1="15.62" x2="57.74" y2="43.12" width="0" layer="19" extent="1-1"/>
+<wire x1="82.04" y1="15.62" x2="57.74" y2="43.12" width="0" layer="19" extent="1-1"/>
 <wire x1="16.495" y1="22.54" x2="49.32" y2="33.7" width="0" layer="19" extent="1-1"/>
 <wire x1="23.9014" y1="71.7296" x2="16.495" y2="22.54" width="0" layer="19" extent="1-1"/>
 <wire x1="27.94" y1="66.99" x2="23.9014" y2="71.7296" width="0" layer="19" extent="1-1"/>
@@ -4725,7 +4725,7 @@ design rules under a new name.</description>
 <signal name="N$6">
 <contactref element="U$18" pad="9"/>
 <contactref element="X3" pad="1"/>
-<wire x1="93.98" y1="7.62" x2="84.58" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="92.71" y1="7.62" x2="82.04" y2="7.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFM_RX/TX">
 <contactref element="U$18" pad="14"/>
@@ -4765,7 +4765,7 @@ design rules under a new name.</description>
 <signal name="RFM_CS/ON">
 <contactref element="JP5" pad="8"/>
 <contactref element="U$18" pad="5"/>
-<wire x1="68.58" y1="13.62" x2="60.96" y2="11.43" width="0" layer="19" extent="1-1"/>
+<wire x1="66.04" y1="13.62" x2="60.96" y2="11.43" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SD_SCK">
 <contactref element="J3" pad="5"/>
