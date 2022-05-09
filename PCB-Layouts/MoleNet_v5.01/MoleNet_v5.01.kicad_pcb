@@ -3600,7 +3600,7 @@
   (gr_text "Antenna" (at 125.5 143.5) (layer "F.SilkS") (tstamp 4d9d8d45-e4d0-4605-981a-216ea6929456)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text "12V" (at 54.75 71.5) (layer "F.SilkS") (tstamp 50603d47-6d27-4c8b-9d77-0efd2aebd9ac)
+  (gr_text "12V" (at 57.2 71.4) (layer "F.SilkS") (tstamp 50603d47-6d27-4c8b-9d77-0efd2aebd9ac)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text "12V" (at 120.75 115 90) (layer "F.SilkS") (tstamp 517583ec-0227-4cac-9851-5fac498f04c8)
