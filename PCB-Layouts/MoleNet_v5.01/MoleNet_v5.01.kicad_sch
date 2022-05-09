@@ -6139,7 +6139,7 @@
     (property "Value" "Antenna" (id 1) (at 250.825 127.635 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal" (id 2) (at 259.08 125.095 0)
+    (property "Footprint" "" (id 2) (at 259.08 125.095 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" " ~" (id 3) (at 259.08 125.095 0)
@@ -7308,7 +7308,7 @@
       (reference "J13") (unit 1) (value "Power In") (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal")
     )
     (path "/00000000-0000-0000-0000-0000626fb1d4"
-      (reference "J14") (unit 1) (value "Antenna") (footprint "Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal")
+      (reference "J14") (unit 1) (value "Antenna") (footprint "Connector_Coaxial:SMA_Amphenol_132134_Vertical")
     )
     (path "/00000000-0000-0000-0000-00006290e904"
       (reference "J15") (unit 1) (value "SDI-12") (footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal")
