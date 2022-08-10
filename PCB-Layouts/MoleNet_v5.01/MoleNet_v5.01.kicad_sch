@@ -9,6 +9,7 @@
     (date "2022-04-15")
     (rev "v5.01")
     (company "ComNet, University of Bremen")
+    (comment 1 "S M Firoj Mahmud")
   )
 
   (lib_symbols
@@ -6139,7 +6140,7 @@
     (property "Value" "Antenna" (id 1) (at 250.825 127.635 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 259.08 125.095 0)
+    (property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical" (id 2) (at 259.08 125.095 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" " ~" (id 3) (at 259.08 125.095 0)
