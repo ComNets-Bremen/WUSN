@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Heltec Server</title>
+</head>
+<body>
+  <h1>GATEWAY</h1>
+  <h2>Wi-Fi Config</h2>
+  <p>Current Wi-Fi SSID: <span id="currentSSID"></span></p>
+
+  <form id="wifiForm">
+    <label for="newSSID">New Wi-Fi SSID:</label> 
+    <input type="text" id="newSSID" name="newSSID"><br><br>
+
+    <label for="newPassword">New Wi-Fi Password:</label>
+    <input type="password" id="newPassword" name="newPassword"><br><br>
+
+    <button type="submit">Submit</button>
+  </form><br><br>
+
+  <button onclick="redirectToVisual()">Show Information</button>
+
+  <script>
+    // JavaScript code to populate current SSID and handle form submission
+    var currentSSIDElement = document.getElementById("currentSSID");
+    var wifiForm = document.getElementById("wifiForm");
+
+    // Function to update the content of the currentSSID element
+    function updateSSID(ssid) {
+      currentSSIDElement.textContent = ssid;
+    }
+
+    // Function to handle form submission
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      var newSSID = document.getElementById("newSSID").value;
+      var newPassword = document.getElementById("newPassword").value;
+
+      // Send the information to the ESP32 server
+      var url = "/?ssid=" + encodeURIComponent(newSSID) + "&password=" + encodeURIComponent(newPassword);
+      // Replace the "your_esp32_ip_address" with the actual IP address of your ESP32 server
+      var esp32ServerUrl = "http://your_esp32_ip_address" + url;
+      // Uncomment the line below to actually submit the form to the server
+      // window.location.href = esp32ServerUrl;
+
+      // Update the currentSSID element with the new SSID
+      updateSSID(newSSID);
+
+      // Reset the form fields
+      wifiForm.reset();
+    }
+
+    // Function to redirect to the visual page
+    function redirectToVisual() {
+      // Replace the "your_esp32_ip_address" with the actual IP address of your ESP32 server
+      var visualUrl = "http://your_esp32_ip_address/visual";
+      window.location.href = visualUrl;
+    }
+
+    // Update the content of the currentSSID element initially
+    var currentSSID = "Your Current SSID"; // Replace with the actual SSID
+    updateSSID(currentSSID);
+
+    // Add form submission event listener
+    wifiForm.addEventListener("submit", handleSubmit);
+  </script>
+</body>
+</html>

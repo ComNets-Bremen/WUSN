@@ -1,0 +1,1 @@
+gci "C:\Users\chanu\OneDrive - General Sir John Kotelawala Defence University\KDU - Semesters\FYP\Coding\Testing Wifi Lora 32 v3" | foreach-object {ampy -p com5 put $_.FullName; Write-host "uploaded $_"} 

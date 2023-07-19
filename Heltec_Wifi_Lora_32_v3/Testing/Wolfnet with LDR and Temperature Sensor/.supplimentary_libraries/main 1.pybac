@@ -1,0 +1,157 @@
+""" Wolf application by Jens Dede
+Under development by KDU group 2023"""
+
+print("reading main.py")
+
+from lib.lib_communication.lora_config import initialize_lora
+from lib.lib_oled.oled_config import initalize_oled, display_msg
+
+from sys import exit
+import time, random
+
+from lib.lib_communication.utils import get_node_id, get_this_config
+import lib.lib_communication.datahandler as datahandler
+
+from lib.lib_led.led import blink
+from lib.board_config import nodes_config
+
+#initialize oled
+oled = initalize_oled()
+blink()
+oled.new_text("oled initailized", 0, 0)
+
+#initialize lora
+lora = initialize_lora()
+if lora is None:
+    oled.new_text("lora initailization failed", 0, 0)
+    exit()
+
+#ENCRYPTION KEY
+aeskey = b"01001001011011100110011100100000"
+dh = datahandler.DataHandler(aeskey)
+
+#set the NODE configuration
+nodeID = get_node_id()
+nodeCfg = get_this_config()
+if nodeCfg is None:
+    oled.new_text("Node not configured", 0, 0)
+    exit()
+
+#Sniffer?
+is_gateway = False
+try:
+    is_gateway = nodeCfg["is_gateway"]
+except:
+    pass
+
+oled.fill(0)
+(oled.text(nodeCfg['name'] + (' | gateway' if is_gateway else ''), 0, 0)); oled.text(str(get_node_id()), 0, 10)
+oled.show() ; time.sleep(2)
+
+num_pkg_sent = 0 #Number of Packages sent for now
+num_received_pkg = 0 #Number of Packets Received
+
+received_msg = packet = msg_sequence = None
+
+payload_sent_at = msg_received_at = time.time() #current time
+msg_send_wait_interval = random.randint(5, 10) #seconds
+msg_receive_wait_interval = 0.5 #seconds
+
+# msg_send_wait_interval = random.randint(5, 20)
+
+receiver_node_id = 3753907262 #alpha
+
+""" waiting_for_ack = False #waiting for ack from receiver
+no_ack_received_wait_interval = 5 #seconds """
+
+while True:
+    #sending msgs
+    if time.time()-payload_sent_at > msg_send_wait_interval:
+        if is_gateway:
+            pass
+        else:
+            #send a message
+            if nodeCfg["is_sender"]:
+                msg = random.randint(1, 99)
+
+                packet = dh.sendEncMsg(msg, receiver_node_id) #to alpha
+                lora.send(packet)
+                waiting_for_ack = True
+
+                [blink() for i in range(0,2)]
+                num_pkg_sent += 1
+
+                display_msg("send", num_pkg_sent, msg, receiver_node_id, oled, nodes_config)
+                print("{}. sent \"{}\" to {}".format(num_pkg_sent, msg, nodes_config[receiver_node_id]['name']))
+        payload_sent_at = time.time()
+
+    """ if waiting_for_ack and time.time()-payload_sent_at > no_ack_received_wait_interval:
+        [blink() for i in range(0,5)]
+        lora.send(packet)
+        print("{}. Resent \"{}\" to {}".format(num_pkg_sent, msg, nodes_config[receiver_node_id]['name']))
+        payload_sent_at = time.time() """
+
+
+    """ 
+    /\_____/\
+   /  o   o  \
+  ( ==  ^  == )
+   )         (
+  (           )
+ ( (  )   (  ) )
+(__(__)___(__)__)
+
+        """
+
+    #receiving msgs
+    if time.time()-msg_received_at >= msg_receive_wait_interval:
+        received_msg, err = lora.recv()
+
+        try:
+            if received_msg is not (b''):
+                packet = dh.receiverEncPacket(bytearray(received_msg))
+                [blink() for i in range(0,1)]
+        except ValueError or AttributeError:
+            pass
+        except Exception as e:
+            print(e)
+            pass
+
+        try:
+
+            if packet is not None and not (b''):
+                packet.set_rssi(lora.getRSSI())
+                packet.set_snr(lora.getSNR())
+
+                if packet.get_is_ack() and not is_gateway: # if the packet received is an ACK
+                    if packet.get_receiver() == get_node_id(): # if it is for me
+                        waiting_for_ack = False
+                        print("ACK received")
+                        display_msg("send", num_pkg_sent, msg, receiver_node_id, oled, nodes_config, ack=True)
+
+                if is_gateway:
+                    new_msg_sequence = packet.get_sequence()
+
+                    if new_msg_sequence != msg_sequence:
+                        msg_sequence = new_msg_sequence
+                        
+                        print("\n\n\nReceived:\n", packet)
+                        num_received_pkg += 1
+
+                        print("Total received packets:", num_received_pkg)
+
+                        msg = packet.get_params()
+                        display_msg("receive", num_received_pkg, msg, packet.get_sender(), oled=oled, nodes_config=nodes_config)
+                        print("{}. received msg \"{}\" from node {}".format(num_received_pkg, msg, packet.get_sender()))
+
+                        ack = packet.create_ack()
+                        if ack:
+                            lora.send(dh.encrypt(ack.create_packet()))
+                            print("Sent ACK")
+
+                packet = received_msg = err = packet = msg = None
+
+        except:
+            pass
+    
+        msg_received_at = time.time()

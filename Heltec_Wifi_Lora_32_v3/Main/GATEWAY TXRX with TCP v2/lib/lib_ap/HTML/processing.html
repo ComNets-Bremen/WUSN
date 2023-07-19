@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing Page</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/14806978?s=200&v=4"/>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            margin-top: 20px;
+        }
+        .homepage-button {
+            padding: 10px 20px;
+            background-color: #FF9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Processing Page</h1>
+    <p>Your request is being processed. Please wait...</p>
+    <button onclick="goToHomepage()" class="homepage-button">Go to Homepage</button>
+
+    <script>
+        // Function to navigate to the homepage
+        function goToHomepage() {
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>

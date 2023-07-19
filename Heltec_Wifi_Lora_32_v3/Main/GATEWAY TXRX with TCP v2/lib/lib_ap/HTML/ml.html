@@ -1,0 +1,200 @@
+<html>
+<head>
+    <title>Machine Learner</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/14806978?s=200&v=4"/>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .homepage-button {
+            background-color: #FF9800;
+        }
+        .dummy-data-button {
+            background-color: #c7c7c7;
+        }
+        #ml-result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #progress {
+            margin-top: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.8.0"></script>
+    <script>
+        // Shuffle the array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function gateway_data_parser() {
+            const x = [];
+
+            const msg_collection = $MSG_COLLECTION$;
+
+            for (let each of msg_collection) {
+                x.push([[each[0], each[3], each[4]], 0]);
+
+                if (each[4] <= 3) {
+                    x[x.length - 1][1] = 1;
+                } else {
+                    x[x.length - 1][1] = 0;
+                }
+            }
+
+            return x;
+        }
+
+        function dummy_data_parser() {
+            const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+            const x = [];
+
+            // const nodes = [2637953060, 4276759790, 1119174399]; //beta, gamma delta
+            const nodes = [1, 2, 3];
+
+            for (let i = 0; i < 10000; i++) {
+            x.push([[nodes[randomInt(0, 2)], randomInt(0, 100), 0], 0]);
+            x[x.length -1][0][2] = x[x.length - 1][0][1] > 75 ? randomInt(3, 10) : x[x.length - 1][0][1] > 50 ? randomInt(1, 10) : randomInt(0, 3);
+            x[x.length -1][1] = x[x.length - 1][0][2] > 3 ? 0 : 1;
+            }
+
+            return x;
+        }
+
+    // Convert the Python code to JavaScript and execute it in the browser
+        async function runMLCode(msg_collection) {
+            // Import required modules
+            const tf = window.tf;
+
+            // Extract the features and target variable
+            let x = [];
+            let y = [];
+
+            // Process the data
+            shuffleArray(msg_collection);
+
+            for (let each of msg_collection) {
+                x.push(each[0][1]);
+                y.push(each[1]);
+            }
+
+            // Split the data into train and test sets
+            const testSize = 0.2;
+
+            const splitIndex = Math.floor(x.length * (1 - testSize));
+            const xTrain = x.slice(0, splitIndex);
+            const xTest = x.slice(splitIndex);
+            const yTrain = y.slice(0, splitIndex);
+            const yTest = y.slice(splitIndex);
+
+            // Define the model architecture
+            const model = tf.sequential();
+            // model.add(tf.layers.dense({ units: 32, activation: 'relu', inputShape: [1] }));
+            // model.add(tf.layers.dense({ units: 16, activation: 'relu' }));
+            // model.add(tf.layers.dense({ units: 1, activation: 'sigmoid' }));
+            model.add(tf.layers.dense({ units: 2, activation: 'relu' , inputShape: [1]}));
+            model.add(tf.layers.dense({ units: 1, activation: 'sigmoid'}));
+
+            // Compile the model
+            model.compile({ optimizer: 'adam', loss: 'binaryCrossentropy', metrics: ['accuracy'] });
+
+            // Train the model
+            const epochs = 20;
+            const history = await model.fit(tf.tensor1d(xTrain), tf.tensor1d(yTrain), {
+                epochs,
+                callbacks: {
+                    onEpochEnd: (epoch, logs) => {
+                        const progressElement = document.getElementById('progress');
+                        progressElement.innerHTML = `Epoch ${epoch + 1}/${epochs} - loss: ${logs.loss.toFixed(4)}, accuracy: ${logs.acc.toFixed(4)}`;
+                    }
+                }
+            });
+
+            // Evaluate the model
+            const evalResult = model.evaluate(tf.tensor1d(xTest), tf.tensor1d(yTest));
+            const loss = evalResult[0].dataSync();
+            const accuracy = evalResult[1].dataSync();
+
+            // Display the results
+            const resultElement = document.getElementById('ml-result');
+            resultElement.innerHTML = `Loss: ${loss[0].toFixed(4)}, Accuracy: ${accuracy[0].toFixed(4)}`;
+
+            // Display the table with test data, predicted outcome, and expected outcome
+            const table = document.createElement('table');
+            table.innerHTML = `
+                <tr>
+                    <th>Sender</th>
+                    <th>Message</th>
+                    <th>Retry Count</th>
+                    <th>Predicted Outcome</th>
+                    <th>Expected Outcome</th>
+                </tr>
+            `;
+
+            const testLength = xTest.length;
+            for (let i = 0; i < testLength; i++) {
+                const row = table.insertRow();
+                row.innerHTML = `
+                    <td>${msg_collection[i + splitIndex][0][0]}</td>
+                    <td>${msg_collection[i + splitIndex][0][1]}</td>
+                    <td>${msg_collection[i + splitIndex][0][2]}</td>
+                    <td>${model.predict(tf.tensor1d([xTest[i]])).dataSync()[0].toFixed(4)}</td>
+                    <td>${yTest[i]}</td>
+                `;
+                // console.log(msg_collection[i + splitIndex][0][0], msg_collection[i + splitIndex][0][1], msg_collection[i + splitIndex][0][2], model.predict(tf.tensor1d([xTest[i]])).dataSync()[0].toFixed(4), yTest[i]);
+            }
+
+            const tableContainer = document.getElementById('table-container');
+            tableContainer.innerHTML = '';
+            tableContainer.appendChild(table);
+        }
+
+        // Function to navigate to the homepage
+        function goToHomepage() {
+            window.location.href = "/";
+        }
+</script>
+</head>
+<body>
+    <h1>Machine Learner</h1>
+    <button onclick="runMLCode(gateway_data_parser())">Deploy Machine Learner</button>
+    <button onclick="runMLCode(dummy_data_parser())" class="dummy-data-button">Train with Dummy Data</button>
+    <button onclick="goToHomepage()" class="homepage-button">Go to Homepage</button>
+    <div id="progress"></div>
+    <div id="ml-result"></div>
+    <div id="table-container"></div>
+</body>
+</html>

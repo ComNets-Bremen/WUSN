@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Wi-Fi Config</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/14806978?s=200&v=4"/>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 5px;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        @media only screen and (max-width: 600px) {
+            /* Responsive styles */
+            label, input[type="text"], input[type="password"] {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <script>
+        // Function to navigate to the homepage
+        function goToHomepage() {
+        window.location.href = "/";
+    }
+    </script>
+</head>
+<body>
+    <h1>Settings</h1>
+    <form>
+        <label for="ssid">Wi-Fi SSID:</label>
+        <input type="text" id="ssid" name="ssid" placeholder="Enter Wi-Fi SSID"> <br><br>
+
+        <label for="password">Wi-Fi Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter Wi-Fi password">
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

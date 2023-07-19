@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open ml.html",
+            "file": "c:\\Users\\chanu\\OneDrive - General Sir John Kotelawala Defence University\\KDU - Semesters\\FYP\\Coding\\Heltec Wifi Lora 32 v3\\GATEWAY TXRX with TCP v2\\lib\\lib_ap\\HTML\\ml.html"
+        }
+    ]
+}

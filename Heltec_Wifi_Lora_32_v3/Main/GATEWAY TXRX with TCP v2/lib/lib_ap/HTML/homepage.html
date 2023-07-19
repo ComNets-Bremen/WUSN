@@ -1,0 +1,84 @@
+<html>
+<head>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .wifi-settings-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .ml-button {
+            padding: 10px 20px;
+            background-color: #FF9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .current-connection {
+            margin-top: 20px;
+        }
+        .current-connection p {
+            margin: 0;
+        }
+        .header-icon {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        // Refresh the page every 5 seconds
+        setInterval(function() {
+            location.reload();
+        }, 5000);
+    </script>
+    <title>WUSN Web Server</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/14806978?s=200&v=4"/>
+</head>
+<body>
+    <h1>WEB SERVER</h1>
+    <div class="current-connection">
+        <h1>Wireless Configuration</h1>
+        <h2>Current Wi-Fi Connection:</h2>
+        <p><b>SSID:</b> $SSID$</p>
+        <p><b>IP Address:</b> $IP$</p>
+    </div><br>
+    <!-- <a href="wifi"><button class="wifi-settings-button">Wi-Fi Settings</button></a> -->
+    <a href="ml"><button class="ml-button">ML (beta)</button></a>
+    <h1>Messages Received</h1>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Sequence</th>
+            <th>Message</th>
+            <th>Retry Count</th>
+            <th>RSSI</th>
+            <th>SNR</th>
+        </tr>
+        $ROWS$
+    </table>
+</body>
+</html>
