@@ -1,3 +1,4 @@
+#This program test SD Card functionality
 from machine import Pin
 import machine
 import os
