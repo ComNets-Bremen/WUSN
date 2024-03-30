@@ -1,4 +1,4 @@
-?* ESP32 RTC test */
+/* ESP32 RTC test */
 #include <ESP32Time.h>
 
 ESP32Time rtc(3600);  // offset in seconds GMT+1
