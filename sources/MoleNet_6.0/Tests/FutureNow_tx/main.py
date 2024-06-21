@@ -13,13 +13,13 @@ device_spi = SoftSPI(
 Pin(device_config['reset'], Pin.OUT, value=1)
 lora = SX127x(device_spi, pins=device_config, parameters=lora_parameters)
 
-d = dht.DHT11(Pin(35))
+d = dht.DHT11(Pin(16))
 
 try:
     d.measure()
 except OSError:
     print("No DHT-11 connected")
 
-payload = 'Temp: {}, Hum: {}'.format(d.temperature(),d.humidity())
+payload = 'Temperature: {}, Humidity: {}'.format(d.temperature(),d.humidity())
 print("Sending packet: \n{}\n".format(payload))
 lora.println(payload)
