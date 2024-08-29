@@ -1,0 +1,66 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,10pF,C_0805_2012Metric,184.409,-70.739,-90,top
+C2,4.7uF,C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,131.572,-83.1342,180,top
+C3,1F,CP_Radial_D22.0mm_P10.00mm_SnapIn,149.0872,-104.8376,0,top
+C4,20pF,C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,148.336,-91.948,90,top
+C5,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,144.8308,-109.1184,-90,top
+C6,20pF,C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,148.3564,-89.5945,-90,top
+C7,12pF,C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,147.5307,-97.4906,-90,top
+C8,4.7uF,C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,114.1984,-90.26732,0,top
+C9,4.7uF,C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,114.1984,-96.91956,0,top
+C10,12pF,C_0402_1005Metric_Pad0.74x0.62mm_HandSolder,147.5307,-95.2046,90,top
+C11,4.7uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,115.5954,-77.4407,-90,top
+C12,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,118.11,-77.4407,-90,top
+C13,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,120.6246,-77.4407,-90,top
+C14,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,123.1392,-77.4407,-90,top
+C15,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,125.6538,-77.4407,-90,top
+C16,1uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,120.6296,-81.915,-90,top
+C17,10nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,125.6588,-81.915,-90,top
+C18,1uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,111.6291,-79.375,180,top
+C19,4.7uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,106.558,-69.9731,-90,top
+C20,1uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,109.5552,-69.9985,-90,top
+C22,1uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,111.6291,-76.4286,180,top
+D1,LED,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,154.0256,-63.4746,-90,top
+D2,LED,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,151.4348,-63.4746,-90,top
+D3,1N5817,D_DO-41_SOD81_P10.16mm_Horizontal,141.6608,-102.362,-90,top
+D4,LED,LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder,148.844,-63.4746,-90,top
+D5,BZX84C7V5LT1G,SOT-23,129.8702,-75.2602,90,top
+FB1,Ferrite_Bead,L_0805_2012Metric_Pad1.05x1.20mm_HandSolder,115.6004,-81.915,90,top
+J1,SWD,IDC-Header_2x05_P2.54mm_Vertical,175.3616,-64.1445,-90,top
+J2,USART Interface,PinHeader_2x04_P2.54mm_Vertical,121.261133,-120.9802,90,top
+J3,SPI Interface,PinHeader_2x05_P2.54mm_Vertical,103.6828,-120.9802,90,top
+J4,Unused Pin,PinHeader_2x08_P2.54mm_Vertical,151.3178,-120.9802,90,top
+J5,LED_Switch,PinHeader_2x03_P2.54mm_Vertical,148.8694,-74.2442,90,top
+J6,RF_UFL_Connector,U.FL_Molex_MCRF_73412-0110_Vertical,195.077,-114.3,-90,top
+J8,RFM_Switch,PinHeader_2x04_P2.54mm_Vertical,166.1414,-103.4896,0,top
+J9,ADC_Pin,PinHeader_2x08_P2.54mm_Vertical,158.6926,-82.3794,0,top
+J10,Unused Pins,PinHeader_2x11_P2.54mm_Vertical,129.032,-110.1294,-90,top
+J11,Micro_SD_Card,microSD_HC_Molex_104031-0811,103.6878,-91.2544,90,top
+J12,I2C Interface,PinHeader_2x04_P2.54mm_Vertical,136.289466,-120.9802,90,top
+J13,Power Out,PinHeader_1x04_P2.54mm_Vertical,109.5298,-62.0776,90,top
+J14,Power In,"TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal",100.2588,-68.9356,-90,top
+J16,RFM_DIO,PinHeader_1x06_P2.54mm_Vertical,195.331,-109.3978,180,top
+J17,SDI-12,"TerminalBlock_Phoenix_PT-1,5-3-3.5-H_1x03_P3.50mm_Horizontal",131.3434,-64.77,180,top
+Q1,BSS123LT1G,SOT-23_Handsoldering,138.6128,-68.453,0,top
+R1,10K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,184.3168,-85.5218,0,top
+R2,10K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,184.409,-75.2856,90,top
+R3,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,154.0637,-67.437,-90,top
+R4,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,151.4094,-67.437,-90,top
+R5,22,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,144.8308,-104.2416,-90,top
+R6,10K,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,145.9942,-92.8878,180,top
+R7,10K,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,114.1984,-94.70548,180,top
+R8,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,148.7551,-67.437,-90,top
+R9,10K,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,114.1984,-92.4814,180,top
+R10,10K,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,114.1984,-88.05324,180,top
+R11,10K,R_0402_1005Metric_Pad0.72x0.64mm_HandSolder,114.1984,-85.82916,180,top
+R12,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,144,-70.4,90,top
+R13,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,133.1866,-71.5264,180,top
+R14,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,128.8846,-71.5264,180,top
+SW1,BOOT0,Switch_SPDT_THT,192.5334,-85.4456,90,top
+SW2,RESET,SW_PUSH_6mm_H4.3mm,189.1854,-69.7844,0,top
+U1,STM32F411R(C_E)T6,LQFP-64_10x10mm_P0.5mm,135.641,-91.2544,180,top
+U2,SN74LVC1G125DBVR,SOT-23-5,137.9016,-72.4662,180,top
+U3,RFM95W_96W_98W,HOPERF_RFM9XW_SMD,181.4626,-107.2896,0,top
+U4,MCP1703,SOT-223-3_TabPin2,115.824,-71.2724,0,top
+Y1,8MHz,Crystal_SMD_5032-2Pin_5.0x3.2mm,151.2824,-90.805,90,top
+Y2,32kHz,Crystal_SMD_3215-2Pin_3.2x1.5mm,149.8421,-96.4492,-90,top

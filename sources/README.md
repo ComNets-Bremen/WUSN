@@ -5,9 +5,14 @@
 This directory contains the first working version with the most important
 functionalities
 
+## MoleNet_1.1
+
+Current development version with some improvements in the libraries
+
 ## MoleNet_2.0
 
 This directory contains the improved version, supporting static routing, wireless configuration and many other functionalities
+=======
 
 ## Maintenance
 
