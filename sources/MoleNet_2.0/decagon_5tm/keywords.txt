@@ -1,0 +1,36 @@
+#######################################
+# Syntax Coloring Map For Decagon5TM
+####################################### 
+# Class (KEYWORD1)
+#######################################
+
+Decagon5TM	 KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+####################################### 
+
+exciteSensor	KEYWORD2
+newDecagon5tmDataAvailable	KEYWORD2
+getDielectric	KEYWORD2
+getTemperature	KEYWORD2
+getChecksum	KEYWORD2
+computeChecksum	KEYWORD2
+serialEventRun	KEYWORD2
+debugSensorData	KEYWORD2
+
+
+######################################
+# Constants (LITERAL1)
+#######################################
+
+BAUD_RATE	LITERAL1
+OFF_DELAY	LITERAL1
+ON_DELAY	LITERAL1
+MAX_STRING_SIZE	LITERAL1
+RAW_DIELECTRIC_MAX_VAL	LITERAL1
+RAW_DIELECTRIC_MIN_VAL	LITERAL1
+RAW_TEMPERATURE_MAX_VAL	LITERAL1
+RAW_TEMPERATURE_MIN_VAL	LITERAL1
+RAW_TEMPERATURE_MAX_SIZE	LITERAL1
+RAW_DIELECTIRC_MAX_SIZE	LITERAL1

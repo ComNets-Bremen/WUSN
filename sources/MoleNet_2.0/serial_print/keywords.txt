@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map For SerialPrint
+####################################### 
+# Class (KEYWORD1)
+#######################################
+
+SerialPrint	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+####################################### 
+specialPrint	KEYWORD2
+
+PRINT_UNREACHABLE	LITERAL1
+PRINT_UNABLE_TO_SEND	LITERAL1
+PRINT_NUMBER_OF_PACKET_SENT	LITERAL1
+PRINT_PACKET_RECEIVED	LITERAL1
+PRINT_PACKET_SENT	LITERAL1
+PRINT_SLEEP_MODE_ACTIVATED	LITERAL1
+PRINT_SLEEP_MODE_DEACTIVATED	LITERAL1
+PRINT_ERROR_SENSOR_NOT_FOUND	LITERAL1
+PRINT_ERROR_SENSOR_CHECKSUM_INCORRECT	LITERAL1
+PRINT_EEPROM_EMPTY	LITERAL1

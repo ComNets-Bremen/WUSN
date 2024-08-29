@@ -9,6 +9,11 @@ functionalities
 
 Current development version with some improvements in the libraries
 
+## MoleNet_2.0
+
+This directory contains the improved version, supporting static routing, wireless configuration and many other functionalities
+=======
+
 ## Maintenance
 
 This directory contains a maintenance app for MoleNet to

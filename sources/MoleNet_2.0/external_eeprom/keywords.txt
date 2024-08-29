@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map For ExternalEEPROM 
+####################################### 
+# Class (KEYWORD1)
+#######################################
+
+ExternalEEPROM	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+####################################### 
+
+initialize	KEYWORD2
+cleanup	KEYWORD2
+savePacket	KEYWORD2
+
+nextAddress	KEYWORD2
+
+######################################
+# Constants (LITERAL1)
+#######################################
+Settings	LITERAL1
+STARTADDRESS	LITERAL1
+PAGE_SIZE	LITERAL1
+TOTAL_SIZE	LITERAL1
+ADDR_WIDTH	LITERAL1
+EEPROM_CS_PIN	LITERAL1

@@ -1,0 +1,42 @@
+#######################################
+# Syntax Coloring Map For MoleNet_Node
+####################################### 
+# Class (KEYWORD1)
+#######################################
+Pin	KEYWORD1
+RTC_CS	LITERAL1
+SENSOR_PW	LITERAL1
+INT	LITERAL1
+RXD	LITERAL1
+TXD	LITERAL1
+RX_SS	LITERAL1
+TX_SS	LITERAL1
+
+MessageFactory	KEYWORD1
+requestPacket	LITERAL1
+decagon5tm	LITERAL1
+moistureTempData	LITERAL1
+dataPlusInfo	LITERAL1
+rxTxInfomration	LITERAL1
+startupConfig	LITERAL1
+
+MoleNet_Node	KEYWORD1
+begin	KEYWORD2
+send_typ_DECAGON5TM_SENSOR	KEYWORD2
+send_typ_MOISTURE_TEMP_SENSOR	KEYWORD2
+send_typ_DATA_PLUS_INFO	KEYWORD2
+send_typ_RX_TX_INFORMATION	KEYWORD2
+send_typ_STARTUP_CONFIG	KEYWORD2
+send_typ_REQ_PACKET	KEYWORD2
+send_CompleteEEPROM	KEYWORD2
+read_CompleteEEPROM	KEYWORD2
+cleanupEEPROM 	KEYWORD2
+saveStartupConfig	KEYWORD2
+loadStartupConfig	KEYWORD2
+applyStartupConfig	KEYWORD2
+overwriteConfig	KEYWORD2
+config	KEYWORD2
+serialCmdLoop	KEYWORD2
+processReceivedData	KEYWORD2
+debugNodeInfo	KEYWORD2
+sleepMode	KEYWORD2
