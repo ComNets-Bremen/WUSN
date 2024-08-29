@@ -7,7 +7,7 @@ server)
 This is an active project and the files in this directory (and the structure of
 the project itself) are subject to change!
 
-#New platform coming up!
+# New platform coming up!
 
 Right now, the PCB and the overall platform received several major changes. Stay tuned for more information! We will update this Readme soon!
 
