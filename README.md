@@ -65,3 +65,8 @@ with a carriage return. Possible commands are:
 ### Manually trigger a measurement
 
 Pull pin `Int1` at the RTC to ground. One tip is enough
+
+# Contributors
+
+Many students and researchers contribute to the MoleNet project. Please check
+the [CONTRIBUTORS.md](CONTRIBUTORS.md) for their names.
