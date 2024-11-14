@@ -3,10 +3,9 @@ import machine
 from machine import I2C, Pin, deepsleep
 import array
 import ubinascii
-import dht
 from ulora import TTN, uLoRa
 
-# Heltec ESP32 LoRa V2 development board SPI pins
+# SPI pins
 LORA_CS = const(48)
 LORA_SCK = const(14)
 LORA_MOSI = const(47)
