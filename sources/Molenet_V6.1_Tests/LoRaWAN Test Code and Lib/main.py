@@ -1,9 +1,3 @@
-# Sample application using the HelTec Automation Wireless Stick development board.
-# https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/blob/master/PinoutDiagram/Wireless_Stick.pdf
-# Application takes temperature, pressure and humidity sensor readings using an external BME280,
-# and sends them to The Things Network (TTN) using LoRaWAN. Onboard SSD1306 OLED screen and LED
-# are used to show useful information.
-
 import utime
 import machine
 from machine import I2C, Pin, deepsleep
@@ -24,11 +18,11 @@ LORA_FPORT = const(1)
 
 # The Things Network (TTN) device details (available in TTN console)
 # TTN device address, 4 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_DEVADDR = bytearray([0x26, 0x0B, 0x6B, 0xBB])
+TTN_DEVADDR = bytearray([0x00 ...])
 # TTN network session key, 16 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_NWKEY = bytearray([0xC5,0xAC, 0x59, 0xF3, 0x21, 0x0B, 0xF6, 0x6A, 0xAF, 0xA8, 0x1B, 0X06, 0xC8, 0xB6, 0x41, 0x76])
+TTN_NWKEY = bytearray([0x00 ...])
 # TTN application session key, 16 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_APP = bytearray([0x10,0x3D, 0x85, 0x73, 0xD5, 0xFF, 0xEB, 0xE5, 0x5A, 0x98, 0xD9, 0X79, 0x17, 0xEF, 0x35, 0xC4]) 
+TTN_APP = bytearray([0x00 ...]) 
 TTN_CONFIG = TTN(TTN_DEVADDR, TTN_NWKEY, TTN_APP, country="EU")
 
 lora = uLoRa(
