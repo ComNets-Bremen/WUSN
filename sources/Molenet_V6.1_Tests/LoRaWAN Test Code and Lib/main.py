@@ -17,11 +17,11 @@ LORA_FPORT = const(1)
 
 # The Things Network (TTN) device details (available in TTN console)
 # TTN device address, 4 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_DEVADDR = bytearray([0x00 ...])
+TTN_DEVADDR = bytearray([0x00, 0x00, 0x00, 0x00])
 # TTN network session key, 16 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_NWKEY = bytearray([0x00 ...])
+TTN_NWKEY = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
 # TTN application session key, 16 Bytes, MSB (REPLACE WITH YOUR OWN!!!)
-TTN_APP = bytearray([0x00 ...]) 
+TTN_APP = bytearray([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]) 
 TTN_CONFIG = TTN(TTN_DEVADDR, TTN_NWKEY, TTN_APP, country="EU")
 
 lora = uLoRa(
