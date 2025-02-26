@@ -1,0 +1,1 @@
+printed with 15% infill no support needed.
