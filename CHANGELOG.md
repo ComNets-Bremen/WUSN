@@ -4,7 +4,7 @@
 ## Hardware
 
 The different layouts are located in the [PCB-Layouts](PCB-Layouts) directory.
-Each directory (should) contain a \*_schematic.pdf file with the corresponding
+Each directory (should) contain a `*_schematic.pdf` file with the corresponding
 schematic.
 
 
