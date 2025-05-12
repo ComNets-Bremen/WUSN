@@ -19,3 +19,8 @@ This directory contains a maintenance app for MoleNet to
 - Get / set the time
 - Set the node id
 - Erase the flash
+
+## wusnExampleServer
+
+An (outdated) webserver based on Django to store and display the measurements
+collected by MoleNet 1.0 boards.
