@@ -65,7 +65,8 @@ Redesign based on ESP32-S3, first version:
 
 - Fixed the broken LED
 - Add a QWIC connector for I2c-based devices
-- Add an on-board BME280 temperature and humidity sensor
+- Add an on-board BME280 temperature, humidity, ambient pressure sensor
+- SD card power can be switched via a GPIO
 
 
 ### MoleNet v6.2
