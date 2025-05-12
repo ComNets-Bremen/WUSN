@@ -72,6 +72,7 @@ Redesign based on ESP32-S3, first version:
 
 - Fixed the SDI-12 interface
 - Fixed some labels (reset button, BME enable pins)
+- Increase size of mounting holes from M2 to M3
 
 **Known issues**
 
