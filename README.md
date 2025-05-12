@@ -19,9 +19,10 @@ The latest version of MoleNet features several key improvements:
 - **SDI-12 sensor interface**: Compatible with high-quality environmental sensors
 - **Micro-SD card support**: Enables extensive local data storage
 - **SX1276-based LoRa transceiver**: Provides long-range wireless communication
-- **On-board BME280 sensor**: Measures temperature, barometric pressure, and humidity
+- **On-board BME280 sensor**: Measures temperature, barometric pressure, and humidity [BME280](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/)
 - **Low-power design**: Ensures long battery life for extended deployments
-- **QWIIC connectivity**: Simplifies integration of I2C-based sensors
+- **qwiic connectivity**: Simplifies integration of I2C-based sensors, as, for
+  example, available here: [Sparkfun](https://www.sparkfun.com/qwiic)
 
 
 ## Older Versions
