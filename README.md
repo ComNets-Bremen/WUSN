@@ -9,7 +9,6 @@ Further information can be found on the official [MoleNet Website](https://molen
 
 > ⚠️ **Note:** This is an active project. The files and directory structure are subject to change.
 
----
 
 ## New ESP32-based MoleNet!
 
@@ -24,13 +23,22 @@ The latest version of MoleNet features several key improvements:
 - **Low-power design**: Ensures long battery life for extended deployments
 - **QWIIC connectivity**: Simplifies integration of I2C-based sensors
 
----
 
 ## Older Versions
 
 Documentation for the ATMEGA-based MoleNet boards can be found in the [Documentation directory](Documentation/MoleNet_ATMEGA.md).
 
----
+## Publications
+
+The following list gives some MoleNet-related publicationsThe following list
+gives some MoleNet-related publications:
+
+- Gellhaar, M., Dede, J., Koehler, H., & Förster, A. (2016). Design and Evaluation of Underground Wireless Sensor Networks for Reforestation Monitoring.
+- Zaman, I., Dede, J., Gellhaar, M., Koehler, H., & Foerster, A. (2016). Molenet: A new sensor node for underground monitoring. IEEE SenseApp.
+- I. Zaman, M. Gellhaar, J. Dede, H. Koehler and A. Foerster, "Demo: Design and Evaluation of MoleNet for Wireless Underground Sensor Networks," 2016 IEEE 41st Conference on Local Computer Networks Workshops (LCN Workshops), Dubai, United Arab Emirates, 2016, pp. 145-147, doi: 10.1109/LCN.2016.040.
+- J. Dede, D. Helms, and A. Förster, “MoleNet: An Underground Sensor Network for Soil Monitoring”, ECEASST, vol. 80, Sep. 2021.
+- Damien Wohwe Sambo, Jens Dede, Nathalie Mitton, Anna Förster. FuzDeMa: A portable Fuzzy-based Decision-Making tool for reliable communication in Wireless Underground Sensor Networks. ITU Journal on Future and Evolving Technologies, 2023, 4 (3), pp.419-433. ⟨10.52953/IXIP2995⟩.
+
 
 ## Contributors
 
