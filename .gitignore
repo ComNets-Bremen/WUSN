@@ -40,3 +40,5 @@ db.sqlite3
 
 # Django migrations
 migrations
+
+*.lck
