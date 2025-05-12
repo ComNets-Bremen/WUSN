@@ -28,6 +28,11 @@ The latest version of MoleNet features several key improvements:
 
 Documentation for the ATMEGA-based MoleNet boards can be found in the [Documentation directory](Documentation/MoleNet_ATMEGA.md).
 
+## Changelog
+
+The list of changes and the evolution of MoleNet is listed in the
+[changelog](CHANGELOG.md).
+
 ## Publications
 
 The following list gives some MoleNet-related publicationsThe following list
