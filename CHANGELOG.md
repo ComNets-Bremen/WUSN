@@ -12,7 +12,7 @@ schematic.
 
 First version of MoleNet. This version is based on an ATMEGA328P-PU and is
 programmed using the Arduino IDE. Further, it has an RFM69VW radio transceiver,
-an EEPROM, an SDI-12 sensor interface and a connector for an external RTC
+an EEPROM, an SDI-12 sensor interface and a connector for an external RV8523 RTC
 module.
 
 ### MoleNet v2.0

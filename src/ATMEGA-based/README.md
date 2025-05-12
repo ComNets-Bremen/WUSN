@@ -1,4 +1,4 @@
-# This directory contains the sourcecode for MoleNet
+# This directory contains the sourcecode for the ATMEGA-based MoleNet boards
 
 ## MoleNet_1.0
 
@@ -12,7 +12,6 @@ Current development version with some improvements in the libraries
 ## MoleNet_2.0
 
 This directory contains the improved version, supporting static routing, wireless configuration and many other functionalities
-=======
 
 ## Maintenance
 
