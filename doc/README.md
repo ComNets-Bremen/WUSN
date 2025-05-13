@@ -6,7 +6,7 @@ versions, please refer to the [ATMEGA](ATMEGA) or [stm32](stm32) directory, resp
 
 # The Hardware
 
-![The MoleNet 6.1 hardware](/images/MoleNet_6.1.jpg MoleNet 6.1)
+![The MoleNet 6.1 hardware](/images/MoleNet_6.1.jpg)
 
 ## Available Components
 
