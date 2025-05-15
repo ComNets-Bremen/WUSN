@@ -9,7 +9,7 @@ versions, please refer to the [ATMEGA](ATMEGA) or [stm32](stm32) directory, resp
 MoleNet 6.1 with all available components assembled. Click on the image for a
 high resolution version.
 
-[![The MoleNet 6.1 hardware](/images/MoleNet_6.1.jpg)](/images/MoleNet_6.1_hq.jpg)
+[![The MoleNet 6.1 hardware](/images/MoleNet_6.1_lr.jpg)](/images/MoleNet_6.1_hq.jpg)
 
 ## Available Components
 
