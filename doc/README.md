@@ -10,7 +10,8 @@ versions, please refer to the [ATMEGA](ATMEGA) or [stm32](stm32) directory, resp
 
 MoleNet contains various different on-board parts. The following tables lists
 the connections and other relevant information for the major parts. For further
-details, refer to [schematics of the board](../PCB-Layouts/).
+details, refer to [schematics of the board](../PCB-Layouts/). The table lists
+the part of the board revision 6.3.
 
 | **Part** | **Part Number**      | **Description**                                                  | **Pins**                                                                                                                            |
 |----------|----------------------|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
