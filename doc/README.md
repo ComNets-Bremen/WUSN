@@ -78,3 +78,6 @@ Usually, you have to setup the board twice according to the settings above. Be
 aware that the port identifier can change depending on your operating system.
 
 # Setup using MicroPython
+
+Please use the documentation for the ESP32 available at
+[micropython.org](https://micropython.org/download/ESP32_GENERIC_S3/)
