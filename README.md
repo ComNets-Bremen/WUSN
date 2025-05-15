@@ -2,7 +2,7 @@
 
 ![MoleNet Logo](images/2025_molenet_logo_small_text_blk.png)
 
-**MoleNet** is a versatile Wireless Underground Sensor Network (WUSN) platform designed for education and low-power environmental monitoring.  
+**MoleNet** is a versatile Wireless Underground Sensor Network (WUSN) platform designed for education and low-power environmental monitoring.
 This repository contains all relevant resources, including PCB layouts, source code, and examples to test and evaluate the platform.
 
 Further information can be found on the official [MoleNet Website](https://molenet.org/)!
@@ -12,7 +12,7 @@ Further information can be found on the official [MoleNet Website](https://molen
 
 ## New ESP32-based MoleNet!
 
-After a long journey, we are finally at a point where we are testing the current version on a larger scale.  
+After a long journey, we are finally at a point where we are testing the current version on a larger scale.
 The latest version of MoleNet features several key improvements:
 
 - **ESP32-S3 microcontroller**: A powerful yet energy-efficient processor that supports various development ecosystems including [MicroPython](https://micropython.org/), [Arduino](https://www.arduino.cc/), and [RiotOS](https://www.riot-os.org/)
@@ -36,17 +36,16 @@ The list of changes and the evolution of MoleNet is listed in the
 
 ## Publications
 
-The following list gives some MoleNet-related publicationsThe following list
-gives some MoleNet-related publications:
+The following list gives some MoleNet-related publications:
 
-- Gellhaar, M., Dede, J., Koehler, H., & Förster, A. (2016). Design and Evaluation of Underground Wireless Sensor Networks for Reforestation Monitoring.
-- Zaman, I., Dede, J., Gellhaar, M., Koehler, H., & Foerster, A. (2016). Molenet: A new sensor node for underground monitoring. IEEE SenseApp.
-- I. Zaman, M. Gellhaar, J. Dede, H. Koehler and A. Foerster, "Demo: Design and Evaluation of MoleNet for Wireless Underground Sensor Networks," 2016 IEEE 41st Conference on Local Computer Networks Workshops (LCN Workshops), Dubai, United Arab Emirates, 2016, pp. 145-147, doi: 10.1109/LCN.2016.040.
-- J. Dede, D. Helms, and A. Förster, “MoleNet: An Underground Sensor Network for Soil Monitoring”, ECEASST, vol. 80, Sep. 2021.
-- Damien Wohwe Sambo, Jens Dede, Nathalie Mitton, Anna Förster. FuzDeMa: A portable Fuzzy-based Decision-Making tool for reliable communication in Wireless Underground Sensor Networks. ITU Journal on Future and Evolving Technologies, 2023, 4 (3), pp.419-433. ⟨10.52953/IXIP2995⟩.
+- Gellhaar, M., Dede, J., Koehler, H., & Förster, A. (2016, February). Design and Evaluation of Underground Wireless Sensor Networks for Reforestation Monitoring. [In EWSN (pp. 229-230)](https://dl.acm.org/doi/10.5555/2893711.2893747).
+- Zaman, I., Dede, J., Gellhaar, M., Koehler, H., & Foerster, A. (2016). Molenet: A new sensor node for underground monitoring. [IEEE SenseApp](https://www.researchgate.net/publication/309397324_MoleNet_A_New_Sensor_Node_for_Underground_Monitoring).
+- Zaman, I., Gellhaar, M., Dede, J., Koehler, H., & Foerster, A. (2016, November). Design and evaluation of MoleNet for wireless underground sensor networks. In 2016 IEEE 41st conference on local computer networks workshops (LCN workshops) (pp. 145-147), [2016 IEEE 41st Conference on Local Computer Networks Workshops (LCN Workshops), Dubai, United Arab Emirates, 2016, pp. 145-147](https://doi.org/10.1109/LCN.2016.040).
+- Dede, J., Helms, D., & Förster, A. (2021). MoleNet: An Underground Sensor Network for Soil Monitoring. [Electronic Communications of the EASST, 80](https://doi.org/10.14279/tuj.eceasst.80.1132)
+- Sambo, D. W., Dede, J., Mitton, N., & Förster, A. (2023). FuzDeMa: A portable Fuzzy-based Decision-Making tool for reliable communication in Wireless Underground Sensor Networks. [ITU Journal on Future and Evolving Technologies, 4(3), 419-433](https://www.doi.org/10.52953/IXIP2995).
 
 
 ## Contributors
 
-Many students and researchers contribute to the MoleNet project.  
+Many students and researchers contribute to the MoleNet project.
 See the full list of contributors in [CONTRIBUTORS.md](CONTRIBUTORS.md).
