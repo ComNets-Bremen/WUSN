@@ -6,9 +6,22 @@ versions, please refer to the [ATMEGA](ATMEGA) or [stm32](stm32) directory, resp
 
 # The Hardware
 
+MoleNet 6.1 with all available components assembled. Click on the image for a
+high resolution image.
+
 [![The MoleNet 6.1 hardware](/images/MoleNet_6.1.jpg)](/images/MoleNet_6.1_hq.jpg)
 
---------------
+## Available Components
+
+- LoRa (SX1276) via Ra-01H module
+- BME280
+- SD-card holder
+- qwiic for external I2C components
+- LEDs
+- SDI-12 for environmental sensors
+- Additional pins (analog and digital)
+
+## Components and their Connections
 
 MoleNet contains various different on-board parts. The following tables lists
 the connections and other relevant information for the major parts. For further
@@ -37,25 +50,13 @@ the part of the board revision 6.3.
 | J9       |                      | Unused GPIOs                                                     |                                                                                                                                     |
 | J10      |                      | SDI-12 connector                                                 | Uses the following GPIOs: Power=GPIO1, SDI_RX_ENABLE=GPIO36, SDI_RX=GPIO18, SDI_TX_ENABLE=GPIO35, SDI_TX=GPIO17, SDI_MARKING=GPIO37 |
 | J11      |                      | Remaining DIOs from LoRa transceiver                             |                                                                                                                                     |
-| J12      |                      | Power jumper, for power measurements. Connect via jumper         |                                                                                                                                     |
+| J12      |                      | Power connector for measurements. Connect via jumper         |                                                                                                                                     |
 | J13      |                      | Micro SD card holder                                             |                                                                                                                                     |
 | J14      | SMA-KWE902           | SMA connector for LoRa                                           |                                                                                                                                     |
 | J15      |                      | qwiic connector for I2C devices                                  | SCL=GPIO8, SDA=GPIO9 (shared with BME280)                                                                                           |
-| J16      |                      | Power SDI-12 interface via jumper. Alternatively: GPIO1          |                                                                                                                                     |
+| J16      |                      | Power SDI-12 interface via jumper. Alternative: switch using GPIO1          |                                                                                                                                     |
 
-
-
-## Available Components
-
-- LoRa (SX1276)
-- BME280
-- SD-card
-- qwiic
-- LEDs
-- SDI-12
-- Additional pins (analog and digital)
-
-## Pins
+## Pins on the ESP32
 
 For the usage of the pins, please refer to the hardware section in this
 document or the schematics of the corresponding versions available in [the PCB-Layouts directory](../PCB-Layouts/).
