@@ -7,7 +7,7 @@ versions, please refer to the [ATMEGA](ATMEGA) or [stm32](stm32) directory, resp
 # The Hardware
 
 MoleNet 6.1 with all available components assembled. Click on the image for a
-high resolution image.
+high resolution version.
 
 [![The MoleNet 6.1 hardware](/images/MoleNet_6.1.jpg)](/images/MoleNet_6.1_hq.jpg)
 
@@ -80,4 +80,4 @@ aware that the port identifier can change depending on your operating system.
 # Setup using MicroPython
 
 Please use the documentation for the ESP32 available at
-[micropython.org](https://micropython.org/download/ESP32_GENERIC_S3/)
+[micropython.org](https://micropython.org/download/ESP32_GENERIC_S3/).
