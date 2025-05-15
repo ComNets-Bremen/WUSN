@@ -8,6 +8,8 @@ versions, please refer to the [ATMEGA](ATMEGA) or [stm32](stm32) directory, resp
 
 ![The MoleNet 6.1 hardware](/images/MoleNet_6.1.jpg)
 
+--------------
+
 MoleNet contains various different on-board parts. The following tables lists
 the connections and other relevant information for the major parts. For further
 details, refer to [schematics of the board](../PCB-Layouts/). The table lists
