@@ -57,6 +57,9 @@ the part of the board revision 6.3.
 
 ## Pins
 
+For the usage of the pins, please refer to the hardware section in this
+document or the schematics of the corresponding versions available in [the PCB-Layouts directory](../PCB-Layouts/).
+
 # Setup using Arduino
 
 1) Install **Arduino IDE** -> [arduino.cc](https://www.arduino.cc/en/software/)
