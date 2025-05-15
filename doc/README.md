@@ -69,7 +69,7 @@ document or the schematics of the corresponding versions available in [the PCB-L
 5) Set USB CDC On Boot: Enabled
 6) Set USB Mode: USB-OTG (Tiny USB)
 
-** ⚠️ Attention: Different ports!**
+**⚠️ Attention: Different ports!**
 
 Different ports are created at various times when the MoleNet platform is connected to the computer. One port is to flash the firmware, while the second is to access the MoleNet Platform’s serial port. The first is the default after a reset. The second is usually entered if the boot button is pressed during reset or when powering up the board.
 
