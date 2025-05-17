@@ -44,6 +44,14 @@ The following list gives some MoleNet-related publications:
 - Dede, J., Helms, D., & Förster, A. (2021). MoleNet: An Underground Sensor Network for Soil Monitoring. [Electronic Communications of the EASST, 80](https://doi.org/10.14279/tuj.eceasst.80.1132)
 - Sambo, D. W., Dede, J., Mitton, N., & Förster, A. (2023). FuzDeMa: A portable Fuzzy-based Decision-Making tool for reliable communication in Wireless Underground Sensor Networks. [ITU Journal on Future and Evolving Technologies, 4(3), 419-433](https://www.doi.org/10.52953/IXIP2995).
 
+## I Want to Have MoleNet!
+
+MoleNet is a dynamic project that is constantly evolving. At its current stage, we do not offer a ready-to-use, fully certified product with complete end-user support.
+
+If you would like to contribute to the development of MoleNet and need hardware for testing and further development, you have two options:
+
+1. **Build the hardware yourself.** All the necessary resources can be found in this repository.
+2. **Order evaluation boards** from our partner [Intergalactic Circuits](https://intergalactic-circuits.de) for personal use.
 
 ## Contributors
 
