@@ -55,6 +55,8 @@ the part of the board revision 6.3.
 | J14      | SMA-KWE902           | SMA connector for LoRa                                           |                                                                                                                                     |
 | J15      |                      | qwiic connector for I2C devices                                  | SCL=GPIO8, SDA=GPIO9 (shared with BME280)                                                                                           |
 | J16      |                      | Power SDI-12 interface via jumper. Alternative: switch using GPIO1          |                                                                                                                                     |
+| J17      |                      | Jumper for ESP32 power supply. Used to measure only the power consumption of the ESP. Connect via jumper.          |                                                                                                                                     |
+
 
 ## Pins on the ESP32
 
