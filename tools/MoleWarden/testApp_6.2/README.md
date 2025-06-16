@@ -35,7 +35,7 @@ Test Board
 - Upload BME280 lib: `./pyboard.py -d /dev/ttyACM0 -f cp src/lib/BME280.py
   :lib/BME280.py`
 - Connect to the serial port `screen /dev/ttyACM0` to check the output and
-  restart the device
+  restart the device using `ctrl-d`
 - Test the next device
 
 Example output
@@ -52,11 +52,18 @@ Example output
     WiFis: Uni-Bremen, eduroam
     ## Step 3: Done
 
+FAQ
+---
+
+### How to kill screen?
+
+- CTRL-A, k, y
 
 Further readings
 ----------------
 
 - pyboard docs:
-  `https://docs.micropython.org/en/latest/reference/pyboard.py.html`
+  https://docs.micropython.org/en/latest/reference/pyboard.py.html
 - esptool docs:
-  `https://docs.espressif.com/projects/esptool/en/latest/esp32/esptool/basic-commands.html`
+  https://docs.espressif.com/projects/esptool/en/latest/esp32/esptool/basic-commands.html
+- screen docs: https://www.gnu.org/software/screen/manual/screen.html
