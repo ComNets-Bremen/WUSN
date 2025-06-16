@@ -1,5 +1,5 @@
-Test MicroPython
-================
+MoleNet Test: Micropython
+=========================
 
 Quick and dirty test for main functionality of new boards.
 
