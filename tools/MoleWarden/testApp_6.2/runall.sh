@@ -29,9 +29,11 @@ done
 set -e # Abort in case of errors
 esptool.py --port $PORT erase_flash
 esptool.py --port $PORT --baud 460800 write_flash 0 $BINARY
-esptool.py --port $PORT --no-stub flash_id
+#esptool.py --port $PORT --no-stub flash_id
 echo "Reset the board by pressing the reset button."
 read -p "After, press any key to continue... " -n1 -s
+echo "waiting for the board..."
+sleep 3 # Let the board boot...
 ./pyboard.py -d $PORT -f cp src/main.py :main.py
 ./pyboard.py -d $PORT -f mkdir lib
 ./pyboard.py -d $PORT -f cp src/lib/BME280.py :lib/BME280.py
